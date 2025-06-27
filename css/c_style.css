@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a0033 0%, #2d1b3d 25%, #4a2c5a 50%, #663d7a 75%, #8e4ec6 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #e0d4ed;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #2a1a3e 0%, #3d2951 50%, #4f3763 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    color: #e0d4ed;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.input-section {
+    margin-bottom: 30px;
+}
+
+.input-description {
+    color: #c7b5d8;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.input-example {
+    background: linear-gradient(135deg, #3a2548 0%, #4a2d5a 100%);
+    border: 1px solid #6a4c93;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 12px;
+    color: #b8a5c9;
+    margin-bottom: 10px;
+    font-family: monospace;
+    word-break: break-all;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px;
+    border: 1px solid #6a4c93;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: vertical;
+    font-family: monospace;
+    background: linear-gradient(135deg, #2a1a3e 0%, #3d2951 100%);
+    color: #e0d4ed;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #8e4ec6;
+    box-shadow: 0 0 0 2px rgba(142, 78, 198, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+textarea::placeholder {
+    color: #8a7396;
+}
+
+.separator-section {
+    margin-bottom: 20px;
+}
+
+.separator-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #e0d4ed;
+}
+
+input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #6a4c93;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100px;
+    background: linear-gradient(135deg, #2a1a3e 0%, #3d2951 100%);
+    color: #e0d4ed;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #8e4ec6;
+    box-shadow: 0 0 0 2px rgba(142, 78, 198, 0.3), inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    margin-bottom: 30px;
+}
+
+button {
+    background: linear-gradient(135deg, #663d7a 0%, #8e4ec6 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+    box-shadow: 0 4px 15px rgba(142, 78, 198, 0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #7a4a8a 0%, #a55dd6 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(142, 78, 198, 0.4);
+}
+
+.clear-btn {
+    background: linear-gradient(135deg, #5a4570 0%, #7a5f8a 100%);
+}
+
+.clear-btn:hover {
+    background: linear-gradient(135deg, #6a5580 0%, #8a6f9a 100%);
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #4a6741 0%, #6a8e61 100%);
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, #5a7751 0%, #7a9e71 100%);
+}
+
+.results-section {
+    margin-top: 30px;
+}
+
+.table-container {
+    overflow-x: auto;
+    border: 1px solid #6a4c93;
+    border-radius: 8px;
+    max-height: 600px;
+    overflow-y: auto;
+    background: linear-gradient(135deg, #2a1a3e 0%, #3d2951 100%);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+th, td {
+    padding: 6px 12px;
+    text-align: left;
+    border-bottom: 1px solid #4a2c5a;
+    border-right: 1px solid #4a2c5a;
+    word-break: break-word;
+    vertical-align: middle;
+    height: 40px;
+    max-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #e0d4ed;
+}
+
+th {
+    background: linear-gradient(135deg, #3a2548 0%, #4f3763 100%);
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-bottom: 2px solid #6a4c93;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+tr:hover {
+    background: linear-gradient(135deg, #3a2548 0%, #4a2d5a 100%);
+}
+
+.row-number {
+    background: linear-gradient(135deg, #4a2c5a 0%, #5a3c6a 100%);
+    font-weight: bold;
+    text-align: center;
+    min-width: 60px;
+    max-width: 60px;
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    border-right: 2px solid #6a4c93;
+}
+
+.row-number th {
+    position: sticky;
+    left: 0;
+    z-index: 3;
+    background: linear-gradient(135deg, #3a2548 0%, #4f3763 100%);
+}
+
+.empty-message {
+    text-align: center;
+    color: #b8a5c9;
+    padding: 40px;
+    font-style: italic;
+}
+
+.account-count {
+    color: #7a9e71;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Специальные стили для колонок */
+.name-col { min-width: 200px; max-width: 200px; }
+.login-col { min-width: 280px; max-width: 280px; }
+.password-col { min-width: 180px; max-width: 180px; }
+.email-login-col { min-width: 280px; max-width: 280px; }
+.email-password-col { min-width: 180px; max-width: 180px; }
+.account-number-col { min-width: 200px; max-width: 200px; }
+.user-agent-col { min-width: 500px; max-width: 500px; }
+.token-col { min-width: 400px; max-width: 400px; }
+.cookies-col { min-width: 500px; max-width: 500px; }
+.other-col { min-width: 300px; max-width: 300px; }
+
+/* Стили для ячеек с иконкой копирования */
+.cell-with-copy {
+    position: relative;
+    padding-right: 35px !important;
+}
+
+.copy-icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.5;
+    width: 16px;
+    height: 16px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23c7b5d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>') no-repeat center;
+    background-size: contain;
+    transition: all 0.2s;
+    z-index: 5;
+}
+
+.copy-icon:hover {
+    opacity: 1;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%238e4ec6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>') no-repeat center;
+    background-size: contain;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.copy-feedback {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #4a6741 0%, #6a8e61 100%);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 10;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.copy-feedback.show {
+    opacity: 1;
+}
+
+.copy-feedback.show {
+    opacity: 1;
+}
+
+/* Кастомные стили для ползунка прокрутки */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(135deg, #2a1a3e 0%, #3d2951 100%);
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #663d7a 0%, #8e4ec6 100%);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #7a4a8a 0%, #a55dd6 100%);
+    box-shadow: 0 2px 6px rgba(142, 78, 198, 0.3);
+}
+
+::-webkit-scrollbar-corner {
+    background: linear-gradient(135deg, #2a1a3e 0%, #3d2951 100%);
+}
+
+/* Стили для Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #8e4ec6 #2a1a3e;
+}
