@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugriki Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/Без1.ico" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4T870HEQPJ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4T870HEQPJ');
+    </script>
+</head>
+<body>
+    <!-- Навигация -->
+    <div class="navigation">
+        <div class="nav-buttons">
+            <button class="nav-btn active" onclick="switchPage('parser')">
+                <span class="nav-icon">📊</span>
+                Парсер аккаунтов
+            </button>
+            <button class="nav-btn" onclick="switchPage('zwnj')">
+                <span class="nav-icon">✨</span>
+                ZWNJ текст
+            </button>
+            <button class="nav-btn" onclick="switchPage('codes')">
+                <span class="nav-icon">🌍</span>
+                Информация
+            </button>
+        </div>
+    </div>
+
+    <!-- Контейнер для страниц -->
+    <div class="pages-container">
+        <!-- Страница парсера (ваш существующий код) -->
+        <div class="page" id="parser-page">
+            <div class="container">
+                <h1 align="center">Парсер аккаунтов by Tugriki</h1>
+                
+                <div class="input-section">
+                    <div class="input-example">
+                        Пример: Имя|Логин|Пароль|Логин_от_почты|Пароль_почты|Номер_аккаунта|...
+                    </div>
+                    <textarea id="inputData" placeholder="Вставьте данные аккаунтов здесь..."></textarea>
+                </div>
+                
+                <div class="separator-section">
+                    <label for="separator">Разделитель данных:</label>
+                    <input type="text" id="separator" value="|">
+                </div>
+                
+                <div class="buttons">
+                    <button onclick="parseData()">Разобрать</button>
+                    <button onclick="clearData()" class="clear-btn">Очистить</button>
+                    <button onclick="downloadExcel()" class="download-btn" id="downloadBtn" style="display: none;">Скачать XLSX</button>
+                </div>
+                
+                <div class="results-section">
+                    <div id="resultsContainer">
+                        <div class="empty-message">
+                            Данные не загружены. Вставьте текст выше и нажмите "Разобрать".
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Страница ZWNJ -->
+        <div class="page" id="zwnj-page">
+            <div class="container">
+                <h1 align="center">ZWNJ текст by Tugriki</h1>
+                
+                <div class="input-section">
+                    <div class="input-description">
+                        ZWNJ (Zero-Width Non-Joiner) - невидимый символ Unicode (U+200C), который добавляется после каждого символа в тексте. 
+                        Используется для контроля соединения символов в некоторых письменностях.
+                    </div>
+                    <!-- <div class="input-example">
+                        Пример: "Привет мир!" → "П‌р‌и‌в‌е‌т‌ ‌м‌и‌р‌!‌"
+                    </div> -->
+                    <textarea id="zwnjInputData" placeholder="Введите текст для обработки ZWNJ..."></textarea>
+                </div> 
+                
+                <div class="buttons">
+                    <button onclick="processZWNJ()">Добавить ZWNJ</button>
+                    <button onclick="clearZWNJ()" class="clear-btn">Очистить</button>
+                    <button onclick="copyZWNJResult()" class="download-btn" id="zwnjCopyBtn" style="display: none;">Копировать результат</button>
+                </div>
+                
+                <div class="results-section">
+                    <div id="zwnjResultsContainer">
+                        <div class="empty-message">
+                            Результат появится здесь после обработки текста.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Страница кодов стран -->
+        <div class="page" id="codes-page">
+            <div class="container">
+                <h1 align="center">Информация о стране by Tugriki</h1>
+                    
+                <div class="input-section">
+                    <div class="input-description">
+                        <p>Поиск телефонных кодов стран. Введите название страны, код или сокращение для поиска.</p>
+                        <p>Для установки флага страны откройте соответствующую статью на Wikipedia и нажмите на изображение флага в правой части страницы, чтобы загрузить его в формате .png.</p>
+                    </div>
+                        <input type="text" id="countrySearch" placeholder="Поиск по названию страны, коду или сокращению..." onkeyup="searchCountries()">
+                    </div>
+                    
+                    <div class="buttons">
+                        <button onclick="clearCountrySearch()" class="clear-btn">Очистить поиск</button>
+                    </div>
+                    
+                    <div class="results-section">
+                        <div id="countryResultsContainer">
+                            <div class="country-count" id="countryCount">Всего стран: 0</div>
+                            <div class="table-container">
+                                <table id="countryTable">
+                                    <thead>
+                                        <tr>
+                                            <th class="country-name-col">Страна</th>
+                                            <th class="country-abbr-col">Сокращение</th>
+                                            <th class="country-val-col">Валюта</th>
+                                            <th class="country-code-col">Код</th>
+                                            <th class="country-example-col">Пример</th>
+                                            <th class="country-example-col">Флаг</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="countryTableBody">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
