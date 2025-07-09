@@ -1742,7 +1742,7 @@ function renderCountryTable() {
             <td class="country-val-col">${country.val}</td>
             <td class="country-code-col">${country.code}</td>
             <td class="country-example-col">${country.example}</td>
-            <td class="country-flag-col"><a href="${country.flag}" class="plain-link">Перейти на wiki</a></td>
+            <td class="country-flag-col"><a href="${country.flag}" class="plain-link" target="_blank" rel="noopener noreferrer">Перейти на wiki</a></td>
         `;
         tbody.appendChild(row);
     });
@@ -1771,7 +1771,7 @@ function searchCountries() {
             <td class="country-val-col">${country.val}</td>
             <td class="country-code-col">${country.code}</td>
             <td class="country-example-col">${country.example}</td>
-            <td class="country-flag-col"><a href="${country.flag}" class="plain-link">Перейти на wiki</a></td>
+            <td class="country-flag-col"><a href="${country.flag}" class="plain-link" target="_blank" rel="noopener noreferrer">Перейти на wiki</a></td>
         `;
         tbody.appendChild(row);
     });
