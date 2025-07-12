@@ -3,15 +3,14 @@
     src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
-  }
-    
+}
 
 * {
     font-family: 'Montserrat', sans-serif !important;
@@ -26,7 +25,7 @@ body {
     min-height: 100vh;
     color: #e0d4ed;
     overflow-x: hidden;
-  font-weight: 400;
+    font-weight: 400;
 }
 
 /* Навигация */
@@ -36,7 +35,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
-    background: linear-gradient(145deg, #2a1a3e 0%, #3d2951 50%, #4f3763 100%);
+    background: linear-gradient(145deg, #2a1a3e 0%, #3d2951 100%);
     border-radius: 50px;
     padding: 10px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
@@ -49,14 +48,14 @@ body {
 }
 
 .nav-btn {
-    background: linear-gradient(135deg, #5a4570 0%, #7a5f8a 100%);
+    background: linear-gradient(135deg, #5a3d70 0%, #7a5a8a 100%);
     color: white;
     border: none;
     padding: 12px 24px;
     border-radius: 25px;
     cursor: pointer;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(90, 69, 112, 0.3);
     position: relative;
@@ -64,22 +63,21 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-  font-weight: 700;
 }
 
 .nav-btn:hover {
-    background: linear-gradient(135deg, #6a5580 0%, #8a6f9a 100%);
+    background: linear-gradient(135deg, #6a4d80 0%, #8a6a9a 100%);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(90, 69, 112, 0.4);
 }
 
 .nav-btn.active {
-    background: linear-gradient(135deg, #663d7a 0%, #8e4ec6 100%);
+    background: linear-gradient(135deg, #6a3d8a 0%, #9a5ec6 100%);
     box-shadow: 0 4px 15px rgba(142, 78, 198, 0.5);
 }
 
 .nav-btn.active:hover {
-    background: linear-gradient(135deg, #7a4a8a 0%, #a55dd6 100%);
+    background: linear-gradient(135deg, #7a4d9a 0%, #aa6dd6 100%);
     box-shadow: 0 6px 20px rgba(142, 78, 198, 0.6);
 }
 
@@ -90,7 +88,7 @@ body {
 /* Контейнер страниц */
 .pages-container {
     position: relative;
-    width: 200vw;
+    width: 400vw; /* Изменено на 400vw для четырех страниц */
     height: 100vh;
     display: flex;
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -99,6 +97,14 @@ body {
 
 .pages-container.show-zwnj {
     transform: translateX(-100vw);
+}
+
+.pages-container.show-codes {
+    transform: translateX(-200vw);
+}
+
+.pages-container.show-links {
+    transform: translateX(-300vw);
 }
 
 .page {
@@ -125,7 +131,7 @@ h1 {
     margin-bottom: 20px;
     font-size: 24px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .input-section {
@@ -137,7 +143,7 @@ h1 {
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.4;
-  font-weight: 400;
+    font-weight: 400;
 }
 
 .input-example {
@@ -151,7 +157,7 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     word-break: break-all;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
-  font-weight: 400;
+    font-weight: 400;
 }
 
 textarea {
@@ -166,7 +172,7 @@ textarea {
     background: linear-gradient(135deg, #2a1a3e 0%, #3d2951 100%);
     color: #e0d4ed;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-  font-weight: 400;
+    font-weight: 400;
 }
 
 textarea:focus {
@@ -186,7 +192,7 @@ textarea::placeholder {
 .separator-section label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 700;
     color: #e0d4ed;
 }
 
@@ -199,7 +205,7 @@ input[type="text"] {
     background: linear-gradient(135deg, #2a1a3e 0%, #3d2951 100%);
     color: #e0d4ed;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
-  font-weight: 400;
+    font-weight: 400;
 }
 
 input[type="text"]:focus {
@@ -223,7 +229,7 @@ button {
     margin-right: 10px;
     box-shadow: 0 4px 15px rgba(142, 78, 198, 0.3);
     transition: all 0.3s ease;
-  font-weight: 700;
+    font-weight: 700;
 }
 
 button:hover {
@@ -266,6 +272,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     font-size: 12px;
+    background: linear-gradient(135deg, #2a1a3e 0%, #3d2951 100%);
 }
 
 th, td {
@@ -284,23 +291,30 @@ th, td {
 }
 
 th {
-    background: linear-gradient(135deg, #3a2548 0%, #4f3763 100%);
-    font-weight: bold;
+    background: linear-gradient(135deg, #4a2c5a 0%, #5a3c6a 50%, #6a4c7a 100%);
+    font-weight: 700;
     position: sticky;
     top: 0;
     z-index: 1;
     border-bottom: 2px solid #6a4c93;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  font-weight: 700;
 }
 
 tr:hover {
-    background: linear-gradient(135deg, #3a2548 0%, #4a2d5a 100%);
+    background: linear-gradient(135deg, #3a2548 0%, #4a2d5a 50%, #5a3d6a 100%);
+}
+
+tr:nth-child(even) {
+    background: linear-gradient(135deg, #2a1a3e 0%, #3d2951 50%, #4f3763 100%);
+}
+
+tr:nth-child(odd) {
+    background: linear-gradient(135deg, #2d1b3d 0%, #3e2a52 50%, #4f3763 100%);
 }
 
 .row-number {
-    background: linear-gradient(135deg, #4a2c5a 0%, #5a3c6a 100%);
-    font-weight: bold;
+    background: linear-gradient(135deg, #4a2c5a 0%, #5a3c6a 50%, #6a4c7a 100%);
+    font-weight: 700;
     text-align: center;
     min-width: 60px;
     max-width: 60px;
@@ -314,8 +328,8 @@ tr:hover {
     position: sticky;
     left: 0;
     z-index: 3;
-    background: linear-gradient(135deg, #3a2548 0%, #4f3763 100%);
-  font-weight: 700;
+    background: linear-gradient(135deg, #4a2c5a 0%, #5a3c6a 50%, #6a4c7a 100%);
+    font-weight: 700;
 }
 
 .empty-message {
@@ -327,9 +341,8 @@ tr:hover {
 
 .account-count {
     color: #7a9e71;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 10px;
-  font-weight: 700;
 }
 
 /* Специальные стили для колонок */
@@ -418,7 +431,7 @@ tr:hover {
     max-height: 300px;
     overflow-y: auto;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
-  font-weight: 400;
+    font-weight: 400;
 }
 
 .zwnj-stats {
@@ -426,12 +439,12 @@ tr:hover {
     gap: 30px;
     margin-bottom: 15px;
     font-size: 14px;
-  font-weight: 400;
+    font-weight: 400;
 }
 
 .zwnj-stat {
     color: #c7b5d8;
-  font-weight: 400;
+    font-weight: 400;
 }
 
 .zwnj-stat strong {
@@ -454,6 +467,160 @@ tr:hover {
     background: linear-gradient(135deg, #5a7751 0%, #7a9e71 100%);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(106, 142, 97, 0.4);
+}
+
+/* Стили для таблицы стран */
+.country-name-col { min-width: 200px; max-width: 200px; }
+.country-abbr-col { min-width: 120px; max-width: 120px; text-align: center; }
+.country-val-col { min-width: 120px; max-width: 120px; text-align: center; }
+.country-code-col { min-width: 100px; max-width: 100px; text-align: center; }
+.country-example-col { min-width: 180px; max-width: 180px; text-align: center; }
+
+.country-count {
+    color: #7a9e71;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Стили для поля поиска стран */
+#countrySearch {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #6a4c93;
+    border-radius: 6px;
+    font-size: 14px;
+    background: linear-gradient(135deg, #2a1a3e 0%, #3d2951 100%);
+    color: #e0d4ed;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+#countrySearch:focus {
+    outline: none;
+    border-color: #8e4ec6;
+    box-shadow: 0 0 0 2px rgba(142, 78, 198, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#countrySearch::placeholder {
+    color: #8a7396;
+}
+
+a.plain-link {
+    color: #c7b5d8;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+a.plain-link:hover,
+a.plain-link:visited,
+a.plain-link:active {
+    color: #c7b5d8;
+    text-decoration: none;
+}
+
+/* Стили для страницы ссылок */
+.link-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.link-card {
+    background: linear-gradient(135deg, #2a1a3e 0%, #3d2951 100%);
+    border: 1px solid #6a4c93;
+    border-radius: 12px;
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    color: #e0d4ed;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.link-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(142, 78, 198, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.link-card:hover::before {
+    opacity: 1;
+}
+
+.link-image {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.link-image img {
+    width: 220px;
+    height: 220px;
+    border-radius: 8px;
+    object-fit: contain; /* Изменено с cover на contain */
+    background: rgba(255, 255, 255, 0.1); /* Добавлен легкий фон */
+    padding: 4px; /* Добавлен небольшой отступ */
+}
+
+.link-card h3 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #e0d4ed;
+}
+
+.link-description {
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    color: #c7b5d8;
+    margin: 15px 0;
+}
+
+.link-button {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #663d7a 0%, #8e4ec6 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(142, 78, 198, 0.3);
+    transition: all 0.3s ease;
+}
+
+.link-button:hover {
+    background: linear-gradient(135deg, #7a4a8a 0%, #a55dd6 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(142, 78, 198, 0.4);
 }
 
 /* Кастомные стили для ползунка прокрутки */
@@ -510,8 +677,8 @@ tr:hover {
         padding: 8px 16px;
         font-size: 12px;
         border-radius: 15px;
-      font-weight: 700;
-}
+        font-weight: 700;
+    }
     
     .nav-icon {
         font-size: 14px;
@@ -534,32 +701,32 @@ tr:hover {
     h1 {
         font-size: 20px;
         margin-bottom: 15px;
-      font-weight: 700;
-}
+        font-weight: 700;
+    }
     
     textarea {
         height: 150px;
         font-size: 13px;
-      font-weight: 400;
-}
+        font-weight: 400;
+    }
     
     .input-example {
         font-size: 11px;
-      font-weight: 400;
-}
+        font-weight: 400;
+    }
     
     .input-description {
         font-size: 13px;
-      font-weight: 400;
-}
+        font-weight: 400;
+    }
     
     button {
         padding: 8px 16px;
         font-size: 13px;
         margin-right: 8px;
         margin-bottom: 8px;
-      font-weight: 700;
-}
+        font-weight: 700;
+    }
     
     .table-container {
         max-height: 400px;
@@ -576,77 +743,24 @@ tr:hover {
         font-size: 13px;
         padding: 12px;
         max-height: 200px;
-      font-weight: 400;
-}
+        font-weight: 400;
+    }
     
     .zwnj-stats {
         flex-direction: column;
         gap: 10px;
         font-size: 13px;
-      font-weight: 400;
+        font-weight: 400;
+    }
+    
+    .link-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .link-card {
+        width: 100%;
+        max-width: 280px;
+    }
 }
-}
-
-/* Обновленные стили для навигации с тремя кнопками */
-.pages-container {
-    width: 300vw; /* Изменили с 200vw на 300vw */
-    /* остальные стили остаются без изменений */
-}
-
-.pages-container.show-codes {
-    transform: translateX(-200vw); /* Новый класс для третьей страницы */
-}
-
-/* Стили для таблицы стран */
-.country-name-col { min-width: 200px; max-width: 200px; }
-.country-abbr-col { min-width: 120px; max-width: 120px; text-align: center; }
-.country-val-col { min-width: 120px; max-width: 120px; text-align: center; }
-.country-code-col { min-width: 100px; max-width: 100px; text-align: center; }
-.country-example-col { min-width: 180px; max-width: 180px; text-align: center; }
-
-.country-count {
-    color: #7a9e71;
-    font-weight: bold;
-    margin-bottom: 10px;
-  font-weight: 700;
-}
-
-/* Стили для поля поиска стран */
-#countrySearch {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #6a4c93;
-    border-radius: 6px;
-    font-size: 14px;
-    background: linear-gradient(135deg, #2a1a3e 0%, #3d2951 100%);
-    color: #e0d4ed;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-}
-
-#countrySearch:focus {
-    outline: none;
-    border-color: #8e4ec6;
-    box-shadow: 0 0 0 2px rgba(142, 78, 198, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-#countrySearch::placeholder {
-    color: #8a7396;
-}
-
-a.plain-link {
-    color: #c7b5d8;
-    text-decoration: none;
-    display: block;           /* чтобы сработал margin */
-    text-align: center;       /* выравнивание текста по центру */
-    margin: 0 auto;           /* центрирует блок по горизонтали */
-  }
-  
-  a.plain-link:hover,
-  a.plain-link:visited,
-  a.plain-link:active {
-    color: #c7b5d8;
-    text-decoration: none;
-  }
-  
-  
