@@ -1780,6 +1780,7 @@ function searchCountries() {
     countElement.textContent = `Всего стран: ${filtered.length}`;
 }
 
+// ЕДИНСТВЕННАЯ функция switchPage - поддерживает все страницы включая 'links'
 function switchPage(pageName) {
     const pagesContainer = document.querySelector('.pages-container');
     const navButtons = document.querySelectorAll('.nav-btn');
@@ -1788,7 +1789,7 @@ function switchPage(pageName) {
     navButtons.forEach(btn => btn.classList.remove('active'));
 
     // Убираем все классы переключения
-    pagesContainer.classList.remove('show-zwnj', 'show-codes');
+    pagesContainer.classList.remove('show-zwnj', 'show-codes', 'show-links');
 
     if (pageName === 'zwnj') {
         pagesContainer.classList.add('show-zwnj');
@@ -1796,6 +1797,9 @@ function switchPage(pageName) {
     } else if (pageName === 'codes') {
         pagesContainer.classList.add('show-codes');
         navButtons[2].classList.add('active');
+    } else if (pageName === 'links') {
+        pagesContainer.classList.add('show-links');
+        navButtons[3].classList.add('active');
     } else {
         navButtons[0].classList.add('active');
     }
@@ -1939,7 +1943,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Убеждаемся, что показана страница парсера
-    pagesContainer.classList.remove('show-zwnj');
+    pagesContainer.classList.remove('show-zwnj', 'show-codes', 'show-links');
     
     // Добавляем обработчик для Enter в ZWNJ поле
     const zwnjInput = document.getElementById('zwnjInputData');

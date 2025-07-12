@@ -29,7 +29,11 @@
             </button>
             <button class="nav-btn" onclick="switchPage('codes')">
                 <span class="nav-icon">🌍</span>
-                Страны
+                Станы
+            </button>
+            <button class="nav-btn" onclick="switchPage('links')">
+                <span class="nav-icon">🔍</span>
+                Ссылки
             </button>
         </div>
     </div>
@@ -39,7 +43,7 @@
         <!-- Страница парсера (ваш существующий код) -->
         <div class="page" id="parser-page">
             <div class="container">
-                <h1 align="center">Парсер аккаунтов by Tugriki</h1>
+                <h1 align="center">Парсер аккаунтов</h1>
                 
                 <div class="input-section">
                     <div class="input-example">
@@ -72,16 +76,13 @@
         <!-- Страница ZWNJ -->
         <div class="page" id="zwnj-page">
             <div class="container">
-                <h1 align="center">ZWNJ текст by Tugriki</h1>
+                <h1 align="center">ZWNJ текст</h1>
                 
                 <div class="input-section">
                     <div class="input-description">
                         ZWNJ (Zero-Width Non-Joiner) - невидимый символ Unicode (U+200C), который добавляется после каждого символа в тексте. 
                         Используется для контроля соединения символов в некоторых письменностях.
                     </div>
-                    <!-- <div class="input-example">
-                        Пример: "Привет мир!" → "П‌р‌и‌в‌е‌т‌ ‌м‌и‌р‌!‌"
-                    </div> -->
                     <textarea id="zwnjInputData" placeholder="Введите текст для обработки ZWNJ..."></textarea>
                 </div> 
                 
@@ -104,40 +105,63 @@
         <!-- Страница кодов стран -->
         <div class="page" id="codes-page">
             <div class="container">
-                <h1 align="center">Информация о стране by Tugriki</h1>
+                <h1 align="center">Информация о стране</h1>
                     
                 <div class="input-section">
                     <div class="input-description">
                         <p>Поиск телефонных кодов стран. Введите название страны, код или сокращение для поиска.</p>
                         <p>Для установки флага страны откройте соответствующую статью на Wikipedia и нажмите на изображение флага в правой части страницы, чтобы загрузить его в формате .png.</p>
                     </div>
-                        <input type="text" id="countrySearch" placeholder="Поиск по названию страны, коду или сокращению..." onkeyup="searchCountries()">
-                    </div>
-                    
-                    <div class="buttons">
-                        <button onclick="clearCountrySearch()" class="clear-btn">Очистить поиск</button>
-                    </div>
-                    
-                    <div class="results-section">
-                        <div id="countryResultsContainer">
-                            <div class="country-count" id="countryCount">Всего стран: 0</div>
-                            <div class="table-container">
-                                <table id="countryTable">
-                                    <thead>
-                                        <tr>
-                                            <th class="country-name-col">Страна</th>
-                                            <th class="country-abbr-col">Сокращение</th>
-                                            <th class="country-val-col">Валюта</th>
-                                            <th class="country-code-col">Код</th>
-                                            <th class="country-example-col">Пример</th>
-                                            <th class="country-example-col">Флаг</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="countryTableBody">
-                                    </tbody>
-                                </table>
-                            </div>
+                    <input type="text" id="countrySearch" placeholder="Поиск по названию страны, коду или сокращению..." onkeyup="searchCountries()">
+                </div>
+                
+                <div class="buttons">
+                    <button onclick="clearCountrySearch()" class="clear-btn">Очистить поиск</button>
+                </div>
+                
+                <div class="results-section">
+                    <div id="countryResultsContainer">
+                        <div class="country-count" id="countryCount">Всего стран: 0</div>
+                        <div class="table-container">
+                            <table id="countryTable">
+                                <thead>
+                                    <tr>
+                                        <th class="country-name-col">Страна</th>
+                                        <th class="country-abbr-col">Сокращение</th>
+                                        <th class="country-val-col">Валюта</th>
+                                        <th class="country-code-col">Код</th>
+                                        <th class="country-example-col">Пример</th>
+                                        <th class="country-example-col">Флаг</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="countryTableBody">
+                                </tbody>
+                            </table>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Страница ссылок -->
+        <div class="page" id="links-page">
+            <div class="container">
+                <h1 align="center">Полезные ссылки</h1>
+                
+                <div class="input-section">
+                    <div class="input-description">
+                        <p align="center">Ресурсы и инструменты для работы.</p>
+                    </div>
+                </div>
+                
+                <div class="link-section">
+                    <div class="link-card">
+                        <div class="link-image">
+                            <img src="img/tg_bot.png" alt="Telegram Bot">
+                        </div>
+                        <h3>Telegram Bot</h3>
+                        <div class="link-description">@tugr1kPRJ_bot</div>
+                        <a href="https://t.me/tugr1kPRJ_bot" target="_blank" rel="noopener noreferrer" class="link-button">Перейти в бота</a>
                     </div>
                 </div>
             </div>
