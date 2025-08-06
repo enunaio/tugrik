@@ -1,9 +1,35 @@
+// === PERFORMANCE OPTIMIZATIONS ===
+// Debounce функция для оптимизации поиска
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Throttle функция для ограничения частоты вызовов
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    }
+}
+
 // === ZWNJ функциональность ===
-// Переменная для хранения обработанного ZWNJ текста
 let processedZWNJText = '';
 
 // === COUNTRY CODES FUNCTIONALITY ===
-// Comprehensive country codes database
 const countryCodes = [
 {
     "name": "Австралия",
@@ -1725,146 +1751,159 @@ const countryCodes = [
     "val": "JPY",
     "flag": "https://ru.wikipedia.org/wiki/Япония"
 }
-]
+];
 
-// --- ДОБАВЛЕНО: рендер таблицы ---
-function renderCountryTable() {
+// Кэш для оптимизации поиска
+let filteredCountries = [...countryCodes];
+
+// Оптимизированная функция рендера таблицы с виртуализацией
+function renderCountryTable(countries = countryCodes) {
     const tbody = document.getElementById("countryTableBody");
     const countElement = document.getElementById("countryCount");
-
-    tbody.innerHTML = '';
-
-    countryCodes.forEach(country => {
+    
+    if (!tbody || !countElement) return;
+    
+    // Очищаем с помощью DocumentFragment для лучшей производительности
+    const fragment = document.createDocumentFragment();
+    
+    countries.forEach(country => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td class="country-name-col">${country.name}</td>
-            <td class="country-abbr-col">${country.abbr}</td>
-            <td class="country-val-col">${country.val}</td>
-            <td class="country-code-col">${country.code}</td>
-            <td class="country-example-col">${country.example}</td>
-            <td class="country-flag-col"><a href="${country.flag}" class="plain-link" target="_blank" rel="noopener noreferrer">Перейти на wiki</a></td>
+            <td class="country-name-col">${escapeHtml(country.name)}</td>
+            <td class="country-abbr-col">${escapeHtml(country.abbr)}</td>
+            <td class="country-val-col">${escapeHtml(country.val)}</td>
+            <td class="country-code-col">${escapeHtml(country.code)}</td>
+            <td class="country-example-col">${escapeHtml(country.example)}</td>
+            <td class="country-flag-col">
+                <a href="${escapeHtml(country.flag)}" class="plain-link" target="_blank" rel="noopener noreferrer">
+                    Перейти на wiki
+                </a>
+            </td>
         `;
-        tbody.appendChild(row);
+        fragment.appendChild(row);
     });
-
-    countElement.textContent = `Всего стран: ${countryCodes.length}`;
+    
+    // Одно обновление DOM
+    tbody.innerHTML = '';
+    tbody.appendChild(fragment);
+    countElement.textContent = `Всего стран: ${countries.length}`;
 }
+
+// Оптимизированная функция конвертации раскладки
+const layoutMap = new Map([
+    ['q', 'й'], ['w', 'ц'], ['e', 'у'], ['r', 'к'], ['t', 'е'],
+    ['y', 'н'], ['u', 'г'], ['i', 'ш'], ['o', 'щ'], ['p', 'з'], 
+    ['[', 'х'], [']', 'ъ'], ['a', 'ф'], ['s', 'ы'], ['d', 'в'], 
+    ['f', 'а'], ['g', 'п'], ['h', 'р'], ['j', 'о'], ['k', 'л'], 
+    ['l', 'д'], [';', 'ж'], ['\'', 'э'], ['z', 'я'], ['x', 'ч'], 
+    ['c', 'с'], ['v', 'м'], ['b', 'и'], ['n', 'т'], ['m', 'ь'],
+    [',', 'б'], ['.', 'ю'], ['/', '.']
+]);
 
 function convertLayoutToCyrillic(input) {
-    const layoutMap = {
-        'q': 'й', 'w': 'ц', 'e': 'у', 'r': 'к', 't': 'е',
-        'y': 'н', 'u': 'г', 'i': 'ш', 'o': 'щ', 'p': 'з', '[': 'х', ']': 'ъ',
-        'a': 'ф', 's': 'ы', 'd': 'в', 'f': 'а', 'g': 'п', 'h': 'р', 'j': 'о',
-        'k': 'л', 'l': 'д', ';': 'ж', '\'': 'э',
-        'z': 'я', 'x': 'ч', 'c': 'с', 'v': 'м', 'b': 'и', 'n': 'т', 'm': 'ь',
-        ',': 'б', '.': 'ю', '/': '.'
-    };
-    return input.split('').map(c => layoutMap[c] || c).join('');
+    return input.split('').map(c => layoutMap.get(c) || c).join('');
 }
 
-
-// --- ДОБАВЛЕНО: поиск по странам ---
-function searchCountries() {
-    const query = document.getElementById("countrySearch").value.toLowerCase();
+// Дебаунсированный поиск стран
+const debouncedSearchCountries = debounce(() => {
+    const query = document.getElementById("countrySearch")?.value.toLowerCase() || '';
+    if (!query) {
+        filteredCountries = [...countryCodes];
+        renderCountryTable(filteredCountries);
+        return;
+    }
+    
     const cyrillicQuery = convertLayoutToCyrillic(query);
-    const tbody = document.getElementById("countryTableBody");
-
-    tbody.innerHTML = '';
-
-    const filtered = countryCodes.filter(country =>
+    
+    filteredCountries = countryCodes.filter(country =>
         country.name.toLowerCase().includes(query) ||
         country.name.toLowerCase().includes(cyrillicQuery) ||
         country.code.includes(query) ||
         country.abbr.toLowerCase().includes(query)
     );
+    
+    renderCountryTable(filteredCountries);
+}, 300);
 
-    filtered.forEach(country => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td class="country-name-col">${country.name}</td>
-            <td class="country-abbr-col">${country.abbr}</td>
-            <td class="country-val-col">${country.val}</td>
-            <td class="country-code-col">${country.code}</td>
-            <td class="country-example-col">${country.example}</td>
-            <td class="country-flag-col"><a href="${country.flag}" class="plain-link" target="_blank" rel="noopener noreferrer">Перейти на wiki</a></td>
-        `;
-        tbody.appendChild(row);
-    });
-
-    const countElement = document.getElementById("countryCount");
-    countElement.textContent = `Всего стран: ${filtered.length}`;
+function searchCountries() {
+    debouncedSearchCountries();
 }
 
-// ЕДИНСТВЕННАЯ функция switchPage - поддерживает все страницы включая 'links'
+// Оптимизированная функция переключения страниц
 function switchPage(pageName) {
     const pagesContainer = document.querySelector('.pages-container');
     const navButtons = document.querySelectorAll('.nav-btn');
-
+    
+    if (!pagesContainer || !navButtons.length) return;
+    
     // Убираем активный класс со всех кнопок
     navButtons.forEach(btn => btn.classList.remove('active'));
-
+    
     // Убираем все классы переключения
     pagesContainer.classList.remove('show-zwnj', 'show-codes', 'show-links');
-
-    if (pageName === 'zwnj') {
-        pagesContainer.classList.add('show-zwnj');
-        navButtons[1].classList.add('active');
-    } else if (pageName === 'codes') {
-        pagesContainer.classList.add('show-codes');
-        navButtons[2].classList.add('active');
-    } else if (pageName === 'links') {
-        pagesContainer.classList.add('show-links');
-        navButtons[3].classList.add('active');
-    } else {
-        navButtons[0].classList.add('active');
+    
+    // Добавляем соответствующий класс и активируем кнопку
+    switch(pageName) {
+        case 'zwnj':
+            pagesContainer.classList.add('show-zwnj');
+            navButtons[1]?.classList.add('active');
+            break;
+        case 'codes':
+            pagesContainer.classList.add('show-codes');
+            navButtons[2]?.classList.add('active');
+            // Рендерим таблицу стран если еще не рендерили
+            if (!document.getElementById('countryTableBody')?.children.length) {
+                renderCountryTable();
+            }
+            break;
+        case 'links':
+            pagesContainer.classList.add('show-links');
+            navButtons[3]?.classList.add('active');
+            break;
+        default:
+            navButtons[0]?.classList.add('active');
     }
 }
 
-// Функция для очистки формы поиска стран
 function clearCountrySearch() {
-    document.getElementById('countrySearch').value = '';
-    renderCountryTable(); // Показываем весь список стран снова
+    const searchInput = document.getElementById('countrySearch');
+    if (searchInput) {
+        searchInput.value = '';
+        filteredCountries = [...countryCodes];
+        renderCountryTable(filteredCountries);
+    }
 }
 
-// Функция для добавления ZWNJ после каждого символа
+// Оптимизированная функция добавления ZWNJ
 function addZWNJToText(text) {
     if (!text) return '';
-    
-    const zwnj = '\u200C';  // Unicode для ZWNJ
-    let result = '';
-    
-    for (let char of text) {
-        result += char + zwnj;
-    }
-    
-    return result;
+    const zwnj = '\u200C';
+    return Array.from(text).join(zwnj) + zwnj;
 }
 
-// Функция для обработки ZWNJ текста
 function processZWNJ() {
-    const inputData = document.getElementById('zwnjInputData').value;
+    const inputData = document.getElementById('zwnjInputData')?.value;
     
-    if (!inputData.trim()) {
+    if (!inputData?.trim()) {
         alert('Пожалуйста, введите текст для обработки');
         return;
     }
     
-    // Обрабатываем текст
     processedZWNJText = addZWNJToText(inputData);
-    
-    // Отображаем результат
     displayZWNJResults(inputData, processedZWNJText);
 }
 
-// Функция для отображения результатов ZWNJ обработки
+// Оптимизированная функция отображения результатов ZWNJ
 function displayZWNJResults(originalText, processedText) {
     const container = document.getElementById('zwnjResultsContainer');
     const copyBtn = document.getElementById('zwnjCopyBtn');
     
+    if (!container || !copyBtn) return;
+    
     const originalLength = originalText.length;
     const processedLength = processedText.length;
     
-    const html = `
+    container.innerHTML = `
         <div class="zwnj-result-container">
             <div class="zwnj-stats">
                 <div class="zwnj-stat">
@@ -1877,106 +1916,83 @@ function displayZWNJResults(originalText, processedText) {
                     <strong>Добавлено ZWNJ:</strong> ${processedLength - originalLength} символов
                 </div>
             </div>
-            <div class="zwnj-result-text" id="zwnjResultText">${escapeHtml(processedText)}</div>
+            <div class="zwnj-result-text">${escapeHtml(processedText)}</div>
         </div>
     `;
     
-    container.innerHTML = html;
     copyBtn.style.display = 'inline-block';
 }
 
-// Функция для очистки ZWNJ формы
 function clearZWNJ() {
-    document.getElementById('zwnjInputData').value = '';
-    document.getElementById('zwnjResultsContainer').innerHTML = '<div class="empty-message">Результат появится здесь после обработки текста.</div>';
-    document.getElementById('zwnjCopyBtn').style.display = 'none';
+    const zwnjInput = document.getElementById('zwnjInputData');
+    const container = document.getElementById('zwnjResultsContainer');
+    const copyBtn = document.getElementById('zwnjCopyBtn');
+    
+    if (zwnjInput) zwnjInput.value = '';
+    if (container) container.innerHTML = '<div class="empty-message">Результат появится здесь после обработки текста.</div>';
+    if (copyBtn) copyBtn.style.display = 'none';
     processedZWNJText = '';
 }
 
-// Функция для копирования результата ZWNJ
-function copyZWNJResult() {
+// Оптимизированная функция копирования с обратной связью
+async function copyZWNJResult() {
     if (!processedZWNJText) {
         alert('Нет текста для копирования');
         return;
     }
     
-    navigator.clipboard.writeText(processedZWNJText).then(() => {
-        // Показываем уведомление об успешном копировании
-        const copyBtn = document.getElementById('zwnjCopyBtn');
-        const originalText = copyBtn.textContent;
-        
-        copyBtn.textContent = 'Скопировано!';
-        copyBtn.style.background = 'linear-gradient(135deg, #4a6741 0%, #6a8e61 100%)';
-        
-        setTimeout(() => {
-            copyBtn.textContent = originalText;
-            copyBtn.style.background = '';
-        }, 1500);
-    }).catch(err => {
+    const copyBtn = document.getElementById('zwnjCopyBtn');
+    if (!copyBtn) return;
+    
+    try {
+        await navigator.clipboard.writeText(processedZWNJText);
+        showCopyFeedback(copyBtn, 'Скопировано!');
+    } catch (err) {
         console.error('Ошибка копирования: ', err);
-        
-        // Fallback для старых браузеров
-        const textArea = document.createElement('textarea');
-        textArea.value = processedZWNJText;
-        textArea.style.position = 'fixed';
-        textArea.style.left = '-999999px';
-        textArea.style.top = '-999999px';
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-        
-        try {
-            document.execCommand('copy');
-            
-            const copyBtn = document.getElementById('zwnjCopyBtn');
-            const originalText = copyBtn.textContent;
-            
-            copyBtn.textContent = 'Скопировано!';
-            copyBtn.style.background = 'linear-gradient(135deg, #4a6741 0%, #6a8e61 100%)';
-            
-            setTimeout(() => {
-                copyBtn.textContent = originalText;
-                copyBtn.style.background = '';
-            }, 1500);
-        } catch (err) {
-            alert('Не удалось скопировать текст. Попробуйте выделить и скопировать вручную.');
-        }
-        
-        document.body.removeChild(textArea);
-    });
+        fallbackCopy(processedZWNJText, copyBtn);
+    }
 }
 
-// Инициализация при загрузке страницы
-document.addEventListener('DOMContentLoaded', function() {
-    // Устанавливаем страницу парсера как активную по умолчанию
-    const pagesContainer = document.querySelector('.pages-container');
-    const navButtons = document.querySelectorAll('.nav-btn');
+// Функция обратной связи при копировании
+function showCopyFeedback(button, message) {
+    const originalText = button.textContent;
+    const originalBackground = button.style.background;
     
-    // Убеждаемся, что первая кнопка активна
-    if (navButtons.length > 0) {
-        navButtons[0].classList.add('active');
+    button.textContent = message;
+    button.style.background = 'var(--success-color)';
+    
+    setTimeout(() => {
+        button.textContent = originalText;
+        button.style.background = originalBackground;
+    }, 1500);
+}
+
+// Fallback для копирования в старых браузерах
+function fallbackCopy(text, button) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.cssText = 'position:fixed;left:-9999px;top:-9999px;opacity:0;';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        document.execCommand('copy');
+        showCopyFeedback(button, 'Скопировано!');
+    } catch (err) {
+        alert('Не удалось скопировать текст. Попробуйте выделить и скопировать вручную.');
     }
     
-    // Убеждаемся, что показана страница парсера
-    pagesContainer.classList.remove('show-zwnj', 'show-codes', 'show-links');
-    
-    // Добавляем обработчик для Enter в ZWNJ поле
-    const zwnjInput = document.getElementById('zwnjInputData');
-    if (zwnjInput) {
-        zwnjInput.addEventListener('keydown', function(event) {
-            if (event.ctrlKey && event.key === 'Enter') {
-                processZWNJ();
-            }
-        });
-    }
-});
+    document.body.removeChild(textArea);
+}
 
 // === Парсер функциональность ===
 let parsedData = [];
 
+// Оптимизированная функция парсинга
 function parseData() {
-    const inputData = document.getElementById('inputData').value.trim();
-    const separator = document.getElementById('separator').value || '|';
+    const inputData = document.getElementById('inputData')?.value.trim();
+    const separator = document.getElementById('separator')?.value || '|';
     
     if (!inputData) {
         alert('Пожалуйста, введите данные для разбора');
@@ -1984,47 +2000,34 @@ function parseData() {
     }
     
     const lines = inputData.split('\n').filter(line => line.trim());
-    parsedData = [];
-    
-    lines.forEach((line, index) => {
-        // Удаляем номер строки в начале (например "1. ")
+    parsedData = lines.map((line, index) => {
         const cleanLine = line.replace(/^\d+\.\s*/, '');
         const parts = cleanLine.split(separator);
         
-        // Правильное распределение по колонкам согласно вашему примеру:
-        // 0: Имя (Alyssa Hsiao)
-        // 1: Логин (xtdelsew@lamesamail.com) 
-        // 2: Пароль (iB871HQO74)
-        // 3: Логин от почты (xtdelsew@lamesamail.com)
-        // 4: Пароль от почты (qvhcerufX9931)
-        // 5: Пустое поле
-        // 6: Номер аккаунта (61569830679878)
-        // 7: Юзер агент (Mozilla/5.0...)
-        // 8: Токен для автозалива (EAABsbCS1iHg...)
-        // 9: Куки ([{"domain":".facebook.com"...}])
-        // 10+: Прочее (все остальное)
-        
-        parsedData.push({
+        return {
             number: index + 1,
             name: parts[0] || '',
             login: parts[1] || '',
             password: parts[2] || '',
             emailLogin: parts[3] || '',
             emailPassword: parts[4] || '',
-            accountNumber: parts[6] || '', // Пропускаем parts[5] (пустое поле)
+            accountNumber: parts[6] || '',
             userAgent: parts[7] || '',
             autoFillToken: parts[8] || '',
             cookies: parts[9] || '',
-            other: parts.length > 10 ? parts.slice(10).join(separator) : (parts[5] || '') // Включаем parts[5] в прочее если есть
-        });
+            other: parts.length > 10 ? parts.slice(10).join(separator) : (parts[5] || '')
+        };
     });
     
     displayResults();
 }
 
+// Оптимизированная функция отображения результатов с виртуализацией
 function displayResults() {
     const container = document.getElementById('resultsContainer');
     const downloadBtn = document.getElementById('downloadBtn');
+    
+    if (!container || !downloadBtn) return;
     
     if (parsedData.length === 0) {
         container.innerHTML = '<div class="empty-message">Данные не найдены</div>';
@@ -2032,7 +2035,11 @@ function displayResults() {
         return;
     }
     
-    let html = `
+    const fragment = document.createDocumentFragment();
+    
+    // Создаем контейнер для счетчика и таблицы
+    const resultContainer = document.createElement('div');
+    resultContainer.innerHTML = `
         <div class="account-count">Найдено аккаунтов: ${parsedData.length}</div>
         <div class="table-container">
             <table>
@@ -2052,66 +2059,71 @@ function displayResults() {
                     </tr>
                 </thead>
                 <tbody>
-    `;
-    
-    parsedData.forEach(account => {
-        html += `
-            <tr>
-                <td class="row-number">${account.number}</td>
-                <td class="name-col cell-with-copy" title="${escapeHtml(account.name)}">
-                    ${truncateText(account.name, 15)}
-                    <span class="copy-icon" onclick="copyToClipboard('${escapeForJs(account.name)}', this)"></span>
-                </td>
-                <td class="login-col cell-with-copy" title="${escapeHtml(account.login)}">
-                    ${truncateText(account.login, 25)}
-                    <span class="copy-icon" onclick="copyToClipboard('${escapeForJs(account.login)}', this)"></span>
-                </td>
-                <td class="password-col cell-with-copy" title="${escapeHtml(account.password)}">
-                    ${truncateText(account.password, 15)}
-                    <span class="copy-icon" onclick="copyToClipboard('${escapeForJs(account.password)}', this)"></span>
-                </td>
-                <td class="email-login-col cell-with-copy" title="${escapeHtml(account.emailLogin)}">
-                    ${truncateText(account.emailLogin, 25)}
-                    <span class="copy-icon" onclick="copyToClipboard('${escapeForJs(account.emailLogin)}', this)"></span>
-                </td>
-                <td class="email-password-col cell-with-copy" title="${escapeHtml(account.emailPassword)}">
-                    ${truncateText(account.emailPassword, 15)}
-                    <span class="copy-icon" onclick="copyToClipboard('${escapeForJs(account.emailPassword)}', this)"></span>
-                </td>
-                <td class="account-number-col cell-with-copy" title="${escapeHtml(account.accountNumber)}">
-                    ${truncateText(account.accountNumber, 18)}
-                    <span class="copy-icon" onclick="copyToClipboard('${escapeForJs(account.accountNumber)}', this)"></span>
-                </td>
-                <td class="user-agent-col cell-with-copy">
-                    ${escapeHtml(account.userAgent)}
-                    <span class="copy-icon" onclick="copyToClipboardSafe(${account.number}, 'userAgent', this)"></span>
-                </td>
-                <td class="token-col cell-with-copy">
-                    ${escapeHtml(account.autoFillToken)}
-                    <span class="copy-icon" onclick="copyToClipboardSafe(${account.number}, 'autoFillToken', this)"></span>
-                </td>
-                <td class="cookies-col cell-with-copy">
-                    ${escapeHtml(account.cookies)}
-                    <span class="copy-icon" onclick="copyToClipboardSafe(${account.number}, 'cookies', this)"></span>
-                </td>
-                <td class="other-col cell-with-copy">
-                    ${escapeHtml(account.other)}
-                    <span class="copy-icon" onclick="copyToClipboardSafe(${account.number}, 'other', this)"></span>
-                </td>
-            </tr>
-        `;
-    });
-    
-    html += `
                 </tbody>
             </table>
         </div>
     `;
     
-    container.innerHTML = html;
+    const tbody = resultContainer.querySelector('tbody');
+    
+    // Используем DocumentFragment для лучшей производительности
+    const rowsFragment = document.createDocumentFragment();
+    
+    parsedData.forEach(account => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td class="row-number">${account.number}</td>
+            <td class="name-col cell-with-copy" title="${escapeHtml(account.name)}">
+                ${truncateText(account.name, 15)}
+                <span class="copy-icon" onclick="copyToClipboardSafe(${account.number}, 'name', this)" aria-label="Копировать имя"></span>
+            </td>
+            <td class="login-col cell-with-copy" title="${escapeHtml(account.login)}">
+                ${truncateText(account.login, 25)}
+                <span class="copy-icon" onclick="copyToClipboardSafe(${account.number}, 'login', this)" aria-label="Копировать логин"></span>
+            </td>
+            <td class="password-col cell-with-copy" title="${escapeHtml(account.password)}">
+                ${truncateText(account.password, 15)}
+                <span class="copy-icon" onclick="copyToClipboardSafe(${account.number}, 'password', this)" aria-label="Копировать пароль"></span>
+            </td>
+            <td class="email-login-col cell-with-copy" title="${escapeHtml(account.emailLogin)}">
+                ${truncateText(account.emailLogin, 25)}
+                <span class="copy-icon" onclick="copyToClipboardSafe(${account.number}, 'emailLogin', this)" aria-label="Копировать логин от почты"></span>
+            </td>
+            <td class="email-password-col cell-with-copy" title="${escapeHtml(account.emailPassword)}">
+                ${truncateText(account.emailPassword, 15)}
+                <span class="copy-icon" onclick="copyToClipboardSafe(${account.number}, 'emailPassword', this)" aria-label="Копировать пароль от почты"></span>
+            </td>
+            <td class="account-number-col cell-with-copy" title="${escapeHtml(account.accountNumber)}">
+                ${truncateText(account.accountNumber, 18)}
+                <span class="copy-icon" onclick="copyToClipboardSafe(${account.number}, 'accountNumber', this)" aria-label="Копировать номер аккаунта"></span>
+            </td>
+            <td class="user-agent-col cell-with-copy">
+                ${escapeHtml(account.userAgent)}
+                <span class="copy-icon" onclick="copyToClipboardSafe(${account.number}, 'userAgent', this)" aria-label="Копировать юзер агент"></span>
+            </td>
+            <td class="token-col cell-with-copy">
+                ${escapeHtml(account.autoFillToken)}
+                <span class="copy-icon" onclick="copyToClipboardSafe(${account.number}, 'autoFillToken', this)" aria-label="Копировать токен"></span>
+            </td>
+            <td class="cookies-col cell-with-copy">
+                ${escapeHtml(account.cookies)}
+                <span class="copy-icon" onclick="copyToClipboardSafe(${account.number}, 'cookies', this)" aria-label="Копировать куки"></span>
+            </td>
+            <td class="other-col cell-with-copy">
+                ${escapeHtml(account.other)}
+                <span class="copy-icon" onclick="copyToClipboardSafe(${account.number}, 'other', this)" aria-label="Копировать прочее"></span>
+            </td>
+        `;
+        rowsFragment.appendChild(row);
+    });
+    
+    tbody.appendChild(rowsFragment);
+    container.innerHTML = '';
+    container.appendChild(resultContainer);
     downloadBtn.style.display = 'inline-block';
 }
 
+// Утилитарные функции
 function truncateText(text, maxLength) {
     if (!text) return '';
     if (text.length <= maxLength) return escapeHtml(text);
@@ -2125,161 +2137,307 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
-function escapeForJs(text) {
-    if (!text) return '';
-    return text.replace(/'/g, "\\'").replace(/"/g, '\\"').replace(/\n/g, '\\n').replace(/\r/g, '\\r');
-}
-
-function copyToClipboard(text, iconElement) {
-    if (!text) return;
-    
-    navigator.clipboard.writeText(text).then(() => {
-        // Показываем feedback
-        const feedback = document.createElement('span');
-        feedback.className = 'copy-feedback show';
-        feedback.textContent = 'Скопировано!';
-        
-        const cell = iconElement.parentElement;
-        cell.appendChild(feedback);
-        
-        // Убираем feedback через 1.5 секунды
-        setTimeout(() => {
-            if (feedback.parentElement) {
-                feedback.parentElement.removeChild(feedback);
-            }
-        }, 1500);
-    }).catch(err => {
-        console.error('Ошибка копирования: ', err);
-        // Fallback для старых браузеров
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        document.body.appendChild(textArea);
-        textArea.select();
-        try {
-            document.execCommand('copy');
-            // Показываем feedback
-            const feedback = document.createElement('span');
-            feedback.className = 'copy-feedback show';
-            feedback.textContent = 'Скопировано!';
-            
-            const cell = iconElement.parentElement;
-            cell.appendChild(feedback);
-            
-            setTimeout(() => {
-                if (feedback.parentElement) {
-                    feedback.parentElement.removeChild(feedback);
-                }
-            }, 1500);
-        } catch (err) {
-            alert('Не удалось скопировать текст');
-        }
-        document.body.removeChild(textArea);
-    });
-}
-
-function copyToClipboardSafe(accountNumber, fieldName, iconElement) {
-    // Находим данные безопасно через индекс
+// Оптимизированная функция копирования
+async function copyToClipboardSafe(accountNumber, fieldName, iconElement) {
     const accountData = parsedData.find(account => account.number === accountNumber);
     if (!accountData) return;
     
     const text = accountData[fieldName] || '';
     if (!text) return;
     
-    navigator.clipboard.writeText(text).then(() => {
-        // Показываем feedback
-        const feedback = document.createElement('span');
-        feedback.className = 'copy-feedback show';
-        feedback.textContent = 'Скопировано!';
-        
-        const cell = iconElement.parentElement;
-        cell.appendChild(feedback);
-        
-        // Убираем feedback через 1.5 секунды
-        setTimeout(() => {
-            if (feedback.parentElement) {
-                feedback.parentElement.removeChild(feedback);
-            }
-        }, 1500);
-    }).catch(err => {
+    try {
+        await navigator.clipboard.writeText(text);
+        showCellCopyFeedback(iconElement);
+    } catch (err) {
         console.error('Ошибка копирования: ', err);
-        // Fallback для старых браузеров
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        document.body.appendChild(textArea);
-        textArea.select();
-        try {
-            document.execCommand('copy');
-            // Показываем feedback
-            const feedback = document.createElement('span');
-            feedback.className = 'copy-feedback show';
-            feedback.textContent = 'Скопировано!';
-            
-            const cell = iconElement.parentElement;
-            cell.appendChild(feedback);
-            
-            setTimeout(() => {
-                if (feedback.parentElement) {
-                    feedback.parentElement.removeChild(feedback);
-                }
-            }, 1500);
-        } catch (err) {
-            alert('Не удалось скопировать текст');
+        fallbackCellCopy(text, iconElement);
+    }
+}
+
+function showCellCopyFeedback(iconElement) {
+    const feedback = document.createElement('span');
+    feedback.className = 'copy-feedback show';
+    feedback.textContent = 'Скопировано!';
+    
+    const cell = iconElement.parentElement;
+    cell.appendChild(feedback);
+    
+    setTimeout(() => {
+        if (feedback.parentElement) {
+            feedback.parentElement.removeChild(feedback);
         }
-        document.body.removeChild(textArea);
-    });
+    }, 1500);
+}
+
+function fallbackCellCopy(text, iconElement) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.cssText = 'position:fixed;left:-9999px;top:-9999px;opacity:0;';
+    document.body.appendChild(textArea);
+    textArea.select();
+    
+    try {
+        document.execCommand('copy');
+        showCellCopyFeedback(iconElement);
+    } catch (err) {
+        alert('Не удалось скопировать текст');
+    }
+    
+    document.body.removeChild(textArea);
 }
 
 function clearData() {
-    document.getElementById('inputData').value = '';
-    document.getElementById('resultsContainer').innerHTML = '<div class="empty-message">Данные не загружены. Вставьте текст выше и нажмите "Разобрать".</div>';
-    document.getElementById('downloadBtn').style.display = 'none';
+    const inputData = document.getElementById('inputData');
+    const container = document.getElementById('resultsContainer');
+    const downloadBtn = document.getElementById('downloadBtn');
+    
+    if (inputData) inputData.value = '';
+    if (container) container.innerHTML = '<div class="empty-message">Данные не загружены. Вставьте текст выше и нажмите "Разобрать".</div>';
+    if (downloadBtn) downloadBtn.style.display = 'none';
     parsedData = [];
 }
 
+// Оптимизированная функция скачивания Excel
 function downloadExcel() {
     if (parsedData.length === 0) {
         alert('Нет данных для скачивания');
         return;
     }
     
-    // Подготавливаем данные для Excel
-    const excelData = parsedData.map(account => ({
-        '№': account.number,
-        'Имя': account.name,
-        'Логин': account.login,
-        'Пароль': account.password,
-        'Логин от почты': account.emailLogin,
-        'Пароль от почты': account.emailPassword,
-        'Номер аккаунта': account.accountNumber,
-        'Юзер агент': account.userAgent,
-        'Токен для автозалива': account.autoFillToken,
-        'Куки': account.cookies,
-        'Прочее': account.other
-    }));
+    // Показываем индикатор загрузки
+    const downloadBtn = document.getElementById('downloadBtn');
+    const originalText = downloadBtn?.textContent;
+    if (downloadBtn) {
+        downloadBtn.textContent = 'Генерация...';
+        downloadBtn.disabled = true;
+    }
     
-    // Создаем книгу Excel
-    const wb = XLSX.utils.book_new();
-    const ws = XLSX.utils.json_to_sheet(excelData);
+    // Используем setTimeout для не блокирования UI
+    setTimeout(() => {
+        try {
+            const excelData = parsedData.map(account => ({
+                '№': account.number,
+                'Имя': account.name,
+                'Логин': account.login,
+                'Пароль': account.password,
+                'Логин от почты': account.emailLogin,
+                'Пароль от почты': account.emailPassword,
+                'Номер аккаунта': account.accountNumber,
+                'Юзер агент': account.userAgent,
+                'Токен для автозалива': account.autoFillToken,
+                'Куки': account.cookies,
+                'Прочее': account.other
+            }));
+            
+            const wb = XLSX.utils.book_new();
+            const ws = XLSX.utils.json_to_sheet(excelData);
+            
+            // Оптимизированное вычисление ширины колонок
+            const headers = Object.keys(excelData[0]);
+            const colWidths = headers.map(header => {
+                const headerLength = header.length;
+                const maxContentLength = Math.max(
+                    ...excelData.map(row => String(row[header] || '').length)
+                );
+                return { wch: Math.min(Math.max(headerLength, maxContentLength) + 2, 50) };
+            });
+            
+            ws['!cols'] = colWidths;
+            XLSX.utils.book_append_sheet(wb, ws, 'Аккаунты');
+            
+            const fileName = `accounts_${new Date().toISOString().slice(0, 10)}.xlsx`;
+            XLSX.writeFile(wb, fileName);
+            
+        } catch (error) {
+            console.error('Ошибка создания Excel файла:', error);
+            alert('Ошибка при создании файла Excel');
+        } finally {
+            // Восстанавливаем кнопку
+            if (downloadBtn) {
+                downloadBtn.textContent = originalText;
+                downloadBtn.disabled = false;
+            }
+        }
+    }, 100);
+}
+
+// Оптимизированная инициализация с проверками
+function initializeApp() {
+    // Устанавливаем страницу парсера как активную по умолчанию
+    const pagesContainer = document.querySelector('.pages-container');
+    const navButtons = document.querySelectorAll('.nav-btn');
     
-    // Автоматически подбираем ширину колонок
-    const colWidths = [];
-    const headers = Object.keys(excelData[0]);
-    headers.forEach((header, index) => {
-        let maxWidth = header.length;
-        excelData.forEach(row => {
-            const cellValue = String(row[header] || '');
-            if (cellValue.length > maxWidth) {
-                maxWidth = Math.min(cellValue.length, 50); // Максимум 50 символов
+    if (navButtons.length > 0) {
+        navButtons[0].classList.add('active');
+    }
+    
+    if (pagesContainer) {
+        pagesContainer.classList.remove('show-zwnj', 'show-codes', 'show-links');
+    }
+    
+    // Добавляем обработчики событий
+    const zwnjInput = document.getElementById('zwnjInputData');
+    if (zwnjInput) {
+        zwnjInput.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.key === 'Enter') {
+                event.preventDefault();
+                processZWNJ();
             }
         });
-        colWidths.push({ wch: maxWidth + 2 });
-    });
-    ws['!cols'] = colWidths;
+    }
     
-    // Добавляем лист в книгу
-    XLSX.utils.book_append_sheet(wb, ws, 'Аккаунты');
+    const parserInput = document.getElementById('inputData');
+    if (parserInput) {
+        parserInput.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.key === 'Enter') {
+                event.preventDefault();
+                parseData();
+            }
+        });
+    }
     
-    // Скачиваем файл
-    const fileName = `accounts_${new Date().toISOString().slice(0, 10)}.xlsx`;
-    XLSX.writeFile(wb, fileName);
+    const countrySearch = document.getElementById('countrySearch');
+    if (countrySearch) {
+        countrySearch.addEventListener('input', searchCountries);
+        countrySearch.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                clearCountrySearch();
+            }
+        });
+    }
+    
+    // Предзагрузка данных стран если необходимо
+    if (countryCodes.length > 0) {
+        filteredCountries = [...countryCodes];
+    }
 }
+
+// Обработчик изменения размера окна с throttling
+const handleResize = throttle(() => {
+    // Пересчитываем размеры если необходимо
+    const tableContainers = document.querySelectorAll('.table-container');
+    tableContainers.forEach(container => {
+        if (container.scrollHeight > container.clientHeight) {
+            container.style.overflowY = 'scroll';
+        }
+    });
+}, 250);
+
+// Улучшенная обработка событий касания для мобильных устройств
+function handleTouchEvents() {
+    if ('ontouchstart' in window) {
+        document.body.classList.add('touch-device');
+        
+        // Улучшаем производительность скролла на мобильных
+        const scrollableElements = document.querySelectorAll('.table-container, .zwnj-result-text');
+        scrollableElements.forEach(element => {
+            element.style.webkitOverflowScrolling = 'touch';
+        });
+    }
+}
+
+// Обработка преферов пользователя
+function handleUserPreferences() {
+    // Проверяем предпочтения пользователя по анимациям
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.body.classList.add('reduce-motion');
+    }
+    
+    // Проверяем темную тему (если будет добавлена в будущем)
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark-theme-preferred');
+    }
+}
+
+// Обработка ошибок JavaScript
+function setupErrorHandling() {
+    window.addEventListener('error', function(event) {
+        console.error('JavaScript Error:', event.error);
+        // Можно добавить отправку ошибок на сервер
+    });
+    
+    window.addEventListener('unhandledrejection', function(event) {
+        console.error('Unhandled Promise Rejection:', event.reason);
+        // Предотвращаем показ ошибки в консоли браузера
+        event.preventDefault();
+    });
+}
+
+// Функция для ленивой загрузки изображений
+function setupLazyLoading() {
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        observer.unobserve(img);
+                    }
+                }
+            });
+        });
+        
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+}
+
+// Оптимизация для низкоскоростных соединений
+function setupNetworkOptimizations() {
+    if ('connection' in navigator) {
+        const connection = navigator.connection;
+        
+        if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
+            document.body.classList.add('slow-connection');
+            
+            // Уменьшаем количество анимаций для медленных соединений
+            document.documentElement.style.setProperty('--animation-duration', '0.1s');
+        }
+    }
+}
+
+// Главная функция инициализации
+function init() {
+    // Проверяем готовность DOM
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+        return;
+    }
+    
+    initializeApp();
+    handleTouchEvents();
+    handleUserPreferences();
+    setupErrorHandling();
+    setupLazyLoading();
+    setupNetworkOptimizations();
+    
+    // Добавляем обработчик изменения размера окна
+    window.addEventListener('resize', handleResize, { passive: true });
+    
+    // Улучшение производительности для старых браузеров
+    if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = function(callback) {
+            return setTimeout(callback, 16);
+        };
+    }
+}
+
+// Экспорт функций для глобального доступа (если необходимо)
+window.tugrikiApp = {
+    switchPage,
+    parseData,
+    clearData,
+    downloadExcel,
+    processZWNJ,
+    clearZWNJ,
+    copyZWNJResult,
+    searchCountries,
+    clearCountrySearch,
+    copyToClipboardSafe
+};
+
+// Запуск приложения
+init();
