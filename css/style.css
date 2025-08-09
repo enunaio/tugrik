@@ -621,7 +621,6 @@ a.plain-link {
 }
 
 a.plain-link:hover,
-a.plain-link:visited,
 a.plain-link:active {
     color: var(--accent-orange);
     text-decoration: none;
