@@ -1,0 +1,3322 @@
+[
+  {
+    "name": "Афганистан",
+    "name_en": "Afghanistan",
+    "country_code": "AF",
+    "abbr": "AFG",
+    "val": "AFN",
+    "code": "+93",
+    "example": "+93 XX XXX XXXX",
+    "aliases": [
+      "Afghanistan"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Афганистан"
+  },
+  {
+    "name": "Албания",
+    "name_en": "Albania",
+    "country_code": "AL",
+    "abbr": "ALB",
+    "val": "ALL",
+    "code": "+355",
+    "example": "+355 XX XXX XXXX",
+    "aliases": [
+      "Albania",
+      "Shqipëria"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Албания"
+  },
+  {
+    "name": "Алжир",
+    "name_en": "Algeria",
+    "country_code": "DZ",
+    "abbr": "DZA",
+    "val": "DZD",
+    "code": "+213",
+    "example": "+213 XXX XX XX XX",
+    "aliases": [
+      "Algeria"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Алжир"
+  },
+  {
+    "name": "American Samoa",
+    "name_en": "American Samoa",
+    "country_code": "AS",
+    "abbr": "ASM",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "American Samoa"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/American_Samoa"
+  },
+  {
+    "name": "Андорра",
+    "name_en": "Andorra",
+    "country_code": "AD",
+    "abbr": "AND",
+    "val": "EUR",
+    "code": "+376",
+    "example": "+376 XXX XXX",
+    "aliases": [
+      "Andorra"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Андорра"
+  },
+  {
+    "name": "Ангола",
+    "name_en": "Angola",
+    "country_code": "AO",
+    "abbr": "AGO",
+    "val": "AOA",
+    "code": "+244",
+    "example": "+244 XXX XXX XXX",
+    "aliases": [
+      "Angola"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Ангола"
+  },
+  {
+    "name": "Anguilla",
+    "name_en": "Anguilla",
+    "country_code": "AI",
+    "abbr": "AIA",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Anguilla"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Anguilla"
+  },
+  {
+    "name": "Antarctica",
+    "name_en": "Antarctica",
+    "country_code": "AQ",
+    "abbr": "ATA",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Antarctica"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Antarctica"
+  },
+  {
+    "name": "Антигуа и Барбуда",
+    "name_en": "Antigua and Barbuda",
+    "country_code": "AG",
+    "abbr": "ATG",
+    "val": "XCD",
+    "code": "+1268",
+    "example": "+1 (268) XXX-XXXX",
+    "aliases": [
+      "Antigua and Barbuda"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Антигуа_и_Барбуда"
+  },
+  {
+    "name": "Аргентина",
+    "name_en": "Argentina",
+    "country_code": "AR",
+    "abbr": "ARG",
+    "val": "ARS",
+    "code": "+54",
+    "example": "+54 XXX XXX-XXXX",
+    "aliases": [
+      "Argentina"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Аргентина"
+  },
+  {
+    "name": "Армения",
+    "name_en": "Armenia",
+    "country_code": "AM",
+    "abbr": "ARM",
+    "val": "AMD",
+    "code": "+374",
+    "example": "+374 XX XXX XXX",
+    "aliases": [
+      "Armenia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Армения"
+  },
+  {
+    "name": "Aruba",
+    "name_en": "Aruba",
+    "country_code": "AW",
+    "abbr": "ABW",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Aruba"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Aruba"
+  },
+  {
+    "name": "Австралия",
+    "name_en": "Australia",
+    "country_code": "AU",
+    "abbr": "AUS",
+    "val": "AUD",
+    "code": "+61",
+    "example": "+61 X XXXX XXXX",
+    "aliases": [
+      "Australia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Австралия"
+  },
+  {
+    "name": "Австрия",
+    "name_en": "Austria",
+    "country_code": "AT",
+    "abbr": "AUT",
+    "val": "EUR",
+    "code": "+43",
+    "example": "+43 XXX XXXXXX",
+    "aliases": [
+      "Austria",
+      "Österreich"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Австрия"
+  },
+  {
+    "name": "Азербайджан",
+    "name_en": "Azerbaijan",
+    "country_code": "AZ",
+    "abbr": "AZE",
+    "val": "AZN",
+    "code": "+994",
+    "example": "+994 XX XXX XX XX",
+    "aliases": [
+      "Azerbaijan"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Азербайджан"
+  },
+  {
+    "name": "Багамы",
+    "name_en": "Bahamas",
+    "country_code": "BS",
+    "abbr": "BHS",
+    "val": "BSD",
+    "code": "+1242",
+    "example": "+1 (242) XXX-XXXX",
+    "aliases": [
+      "Bahamas"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Багамы"
+  },
+  {
+    "name": "Бахрейн",
+    "name_en": "Bahrain",
+    "country_code": "BH",
+    "abbr": "BHR",
+    "val": "BHD",
+    "code": "+973",
+    "example": "+973 XXXX XXXX",
+    "aliases": [
+      "Bahrain"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Бахрейн"
+  },
+  {
+    "name": "Бангладеш",
+    "name_en": "Bangladesh",
+    "country_code": "BD",
+    "abbr": "BGD",
+    "val": "BDT",
+    "code": "+880",
+    "example": "+880 XXXX-XXXXXX",
+    "aliases": [
+      "Bangladesh"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Бангладеш"
+  },
+  {
+    "name": "Барбадос",
+    "name_en": "Barbados",
+    "country_code": "BB",
+    "abbr": "BRB",
+    "val": "BBD",
+    "code": "+1246",
+    "example": "+1 (246) XXX-XXXX",
+    "aliases": [
+      "Barbados"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Барбадос"
+  },
+  {
+    "name": "Беларусь",
+    "name_en": "Belarus",
+    "country_code": "BY",
+    "abbr": "BLR",
+    "val": "BYN",
+    "code": "+375",
+    "example": "+375 XX XXX XX XX",
+    "aliases": [
+      "Belarus",
+      "Белоруссия"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Белоруссия"
+  },
+  {
+    "name": "Бельгия",
+    "name_en": "Belgium",
+    "country_code": "BE",
+    "abbr": "BEL",
+    "val": "EUR",
+    "code": "+32",
+    "example": "+32 XXX XX XX XX",
+    "aliases": [
+      "Belgium",
+      "België",
+      "Belgique"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Бельгия"
+  },
+  {
+    "name": "Белиз",
+    "name_en": "Belize",
+    "country_code": "BZ",
+    "abbr": "BLZ",
+    "val": "BZD",
+    "code": "+501",
+    "example": "+501 XXX-XXXX",
+    "aliases": [
+      "Belize"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Белиз"
+  },
+  {
+    "name": "Бенин",
+    "name_en": "Benin",
+    "country_code": "BJ",
+    "abbr": "BEN",
+    "val": "XOF",
+    "code": "+229",
+    "example": "+229 XX XX XX XX",
+    "aliases": [
+      "Benin"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Бенин"
+  },
+  {
+    "name": "Bermuda",
+    "name_en": "Bermuda",
+    "country_code": "BM",
+    "abbr": "BMU",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Bermuda"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Bermuda"
+  },
+  {
+    "name": "Бутан",
+    "name_en": "Bhutan",
+    "country_code": "BT",
+    "abbr": "BTN",
+    "val": "BTN",
+    "code": "+975",
+    "example": "+975 X XXX XXX",
+    "aliases": [
+      "Bhutan"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Бутан"
+  },
+  {
+    "name": "Боливия",
+    "name_en": "Bolivia",
+    "country_code": "BO",
+    "abbr": "BOL",
+    "val": "BOB",
+    "code": "+591",
+    "example": "+591 X XXX XXXX",
+    "aliases": [
+      "Bolivia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Боливия"
+  },
+  {
+    "name": "Bonaire, Sint Eustatius and Saba",
+    "name_en": "Bonaire, Sint Eustatius and Saba",
+    "country_code": "BQ",
+    "abbr": "BES",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Bonaire, Sint Eustatius and Saba"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Bonaire,_Sint_Eustatius_and_Saba"
+  },
+  {
+    "name": "Босния и Герцеговина",
+    "name_en": "Bosnia and Herzegovina",
+    "country_code": "BA",
+    "abbr": "BIH",
+    "val": "BAM",
+    "code": "+387",
+    "example": "+387 XX XXX XXX",
+    "aliases": [
+      "Bosnia and Herzegovina",
+      "BiH"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Босния_и_Герцеговина"
+  },
+  {
+    "name": "Ботсвана",
+    "name_en": "Botswana",
+    "country_code": "BW",
+    "abbr": "BWA",
+    "val": "BWP",
+    "code": "+267",
+    "example": "+267 XX XXX XXX",
+    "aliases": [
+      "Botswana"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Ботсвана"
+  },
+  {
+    "name": "Bouvet Island",
+    "name_en": "Bouvet Island",
+    "country_code": "BV",
+    "abbr": "BVT",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Bouvet Island"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Bouvet_Island"
+  },
+  {
+    "name": "Бразилия",
+    "name_en": "Brazil",
+    "country_code": "BR",
+    "abbr": "BRA",
+    "val": "BRL",
+    "code": "+55",
+    "example": "+55 XX XXXXX-XXXX",
+    "aliases": [
+      "Brazil",
+      "Brasil"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Бразилия"
+  },
+  {
+    "name": "British Indian Ocean Territory",
+    "name_en": "British Indian Ocean Territory",
+    "country_code": "IO",
+    "abbr": "IOT",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "British Indian Ocean Territory"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/British_Indian_Ocean_Territory"
+  },
+  {
+    "name": "Бруней",
+    "name_en": "Brunei",
+    "country_code": "BN",
+    "abbr": "BRN",
+    "val": "BND",
+    "code": "+673",
+    "example": "+673 XXX XXXX",
+    "aliases": [
+      "Brunei"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Бруней"
+  },
+  {
+    "name": "Болгария",
+    "name_en": "Bulgaria",
+    "country_code": "BG",
+    "abbr": "BGR",
+    "val": "BGN",
+    "code": "+359",
+    "example": "+359 XXX XXX XXX",
+    "aliases": [
+      "Bulgaria",
+      "България"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Болгария"
+  },
+  {
+    "name": "Буркина-Фасо",
+    "name_en": "Burkina Faso",
+    "country_code": "BF",
+    "abbr": "BFA",
+    "val": "XOF",
+    "code": "+226",
+    "example": "+226 XX XX XX XX",
+    "aliases": [
+      "Burkina Faso"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Буркина-Фасо"
+  },
+  {
+    "name": "Бурунди",
+    "name_en": "Burundi",
+    "country_code": "BI",
+    "abbr": "BDI",
+    "val": "BIF",
+    "code": "+257",
+    "example": "+257 XX XX XX XX",
+    "aliases": [
+      "Burundi"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Бурунди"
+  },
+  {
+    "name": "Камбоджа",
+    "name_en": "Cambodia",
+    "country_code": "KH",
+    "abbr": "KHM",
+    "val": "KHR",
+    "code": "+855",
+    "example": "+855 XX XXX XXX",
+    "aliases": [
+      "Cambodia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Камбоджа"
+  },
+  {
+    "name": "Камерун",
+    "name_en": "Cameroon",
+    "country_code": "CM",
+    "abbr": "CMR",
+    "val": "XAF",
+    "code": "+237",
+    "example": "+237 X XX XX XX XX",
+    "aliases": [
+      "Cameroon"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Камерун"
+  },
+  {
+    "name": "Канада",
+    "name_en": "Canada",
+    "country_code": "CA",
+    "abbr": "CAN",
+    "val": "CAD",
+    "code": "+1",
+    "example": "+1 (XXX) XXX-XXXX",
+    "aliases": [
+      "Canada"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Канада"
+  },
+  {
+    "name": "Кабо-Верде",
+    "name_en": "Cape Verde",
+    "country_code": "CV",
+    "abbr": "CPV",
+    "val": "CVE",
+    "code": "+238",
+    "example": "+238 XXX XX XX",
+    "aliases": [
+      "Cape Verde",
+      "Cabo Verde"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Кабо-Верде"
+  },
+  {
+    "name": "Cayman Islands",
+    "name_en": "Cayman Islands",
+    "country_code": "KY",
+    "abbr": "CYM",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Cayman Islands"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Cayman_Islands"
+  },
+  {
+    "name": "ЦАР",
+    "name_en": "Central African Republic",
+    "country_code": "CF",
+    "abbr": "CAF",
+    "val": "XAF",
+    "code": "+236",
+    "example": "+236 XX XX XX XX",
+    "aliases": [
+      "Central African Republic",
+      "CAR"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Центральноафриканская_Республика"
+  },
+  {
+    "name": "Чад",
+    "name_en": "Chad",
+    "country_code": "TD",
+    "abbr": "TCD",
+    "val": "XAF",
+    "code": "+235",
+    "example": "+235 XX XX XX XX",
+    "aliases": [
+      "Chad",
+      "Tchad"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Чад"
+  },
+  {
+    "name": "Чили",
+    "name_en": "Chile",
+    "country_code": "CL",
+    "abbr": "CHL",
+    "val": "CLP",
+    "code": "+56",
+    "example": "+56 X XXXX XXXX",
+    "aliases": [
+      "Chile"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Чили"
+  },
+  {
+    "name": "Китай",
+    "name_en": "China",
+    "country_code": "CN",
+    "abbr": "CHN",
+    "val": "CNY",
+    "code": "+86",
+    "example": "+86 XXX XXXX XXXX",
+    "aliases": [
+      "China",
+      "中国"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Китай"
+  },
+  {
+    "name": "Christmas Island",
+    "name_en": "Christmas Island",
+    "country_code": "CX",
+    "abbr": "CXR",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Christmas Island"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Christmas_Island"
+  },
+  {
+    "name": "Cocos (Keeling) Islands",
+    "name_en": "Cocos (Keeling) Islands",
+    "country_code": "CC",
+    "abbr": "CCK",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Cocos (Keeling) Islands"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Cocos_(Keeling)_Islands"
+  },
+  {
+    "name": "Колумбия",
+    "name_en": "Colombia",
+    "country_code": "CO",
+    "abbr": "COL",
+    "val": "COP",
+    "code": "+57",
+    "example": "+57 XXX XXX XXXX",
+    "aliases": [
+      "Colombia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Колумбия"
+  },
+  {
+    "name": "Коморы",
+    "name_en": "Comoros",
+    "country_code": "KM",
+    "abbr": "COM",
+    "val": "KMF",
+    "code": "+269",
+    "example": "+269 XXX XXXX",
+    "aliases": [
+      "Comoros"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Коморы"
+  },
+  {
+    "name": "Cook Islands",
+    "name_en": "Cook Islands",
+    "country_code": "CK",
+    "abbr": "COK",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Cook Islands"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Cook_Islands"
+  },
+  {
+    "name": "Коста-Рика",
+    "name_en": "Costa Rica",
+    "country_code": "CR",
+    "abbr": "CRI",
+    "val": "CRC",
+    "code": "+506",
+    "example": "+506 XXXX XXXX",
+    "aliases": [
+      "Costa Rica"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Коста-Рика"
+  },
+  {
+    "name": "Хорватия",
+    "name_en": "Croatia",
+    "country_code": "HR",
+    "abbr": "HRV",
+    "val": "EUR",
+    "code": "+385",
+    "example": "+385 XX XXX XXX",
+    "aliases": [
+      "Croatia",
+      "Hrvatska"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Хорватия"
+  },
+  {
+    "name": "Куба",
+    "name_en": "Cuba",
+    "country_code": "CU",
+    "abbr": "CUB",
+    "val": "CUP",
+    "code": "+53",
+    "example": "+53 X XXX XXXX",
+    "aliases": [
+      "Cuba"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Куба"
+  },
+  {
+    "name": "Curaçao",
+    "name_en": "Curaçao",
+    "country_code": "CW",
+    "abbr": "CUW",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Curaçao"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Curaçao"
+  },
+  {
+    "name": "Кипр",
+    "name_en": "Cyprus",
+    "country_code": "CY",
+    "abbr": "CYP",
+    "val": "EUR",
+    "code": "+357",
+    "example": "+357 XX XXX XXX",
+    "aliases": [
+      "Cyprus",
+      "Κύπρος"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Кипр"
+  },
+  {
+    "name": "Чехия",
+    "name_en": "Czech Republic",
+    "country_code": "CZ",
+    "abbr": "CZE",
+    "val": "CZK",
+    "code": "+420",
+    "example": "+420 XXX XXX XXX",
+    "aliases": [
+      "Czech Republic",
+      "Czechia",
+      "Česká republika"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Чехия"
+  },
+  {
+    "name": "ДР Конго",
+    "name_en": "Democratic Republic of the Congo",
+    "country_code": "CD",
+    "abbr": "COD",
+    "val": "CDF",
+    "code": "+243",
+    "example": "+243 XXX XXX XXX",
+    "aliases": [
+      "Democratic Republic of the Congo",
+      "Congo-Kinshasa",
+      "DRC"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Демократическая_Республика_Конго"
+  },
+  {
+    "name": "Дания",
+    "name_en": "Denmark",
+    "country_code": "DK",
+    "abbr": "DNK",
+    "val": "DKK",
+    "code": "+45",
+    "example": "+45 XX XX XX XX",
+    "aliases": [
+      "Denmark",
+      "Danmark"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Дания"
+  },
+  {
+    "name": "Джибути",
+    "name_en": "Djibouti",
+    "country_code": "DJ",
+    "abbr": "DJI",
+    "val": "DJF",
+    "code": "+253",
+    "example": "+253 XX XX XX XX",
+    "aliases": [
+      "Djibouti"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Джибути"
+  },
+  {
+    "name": "Доминика",
+    "name_en": "Dominica",
+    "country_code": "DM",
+    "abbr": "DMA",
+    "val": "XCD",
+    "code": "+1767",
+    "example": "+1 (767) XXX-XXXX",
+    "aliases": [
+      "Dominica"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Доминика"
+  },
+  {
+    "name": "Доминиканская Республика",
+    "name_en": "Dominican Republic",
+    "country_code": "DO",
+    "abbr": "DOM",
+    "val": "DOP",
+    "code": "+1",
+    "example": "+1 (XXX) XXX-XXXX",
+    "aliases": [
+      "Dominican Republic"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Доминиканская_Республика"
+  },
+  {
+    "name": "Тимор-Лешти",
+    "name_en": "East Timor",
+    "country_code": "TL",
+    "abbr": "TLS",
+    "val": "USD",
+    "code": "+670",
+    "example": "+670 XXX XXXX",
+    "aliases": [
+      "East Timor",
+      "Timor-Leste"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Восточный_Тимор"
+  },
+  {
+    "name": "Эквадор",
+    "name_en": "Ecuador",
+    "country_code": "EC",
+    "abbr": "ECU",
+    "val": "USD",
+    "code": "+593",
+    "example": "+593 XX XXX XXXX",
+    "aliases": [
+      "Ecuador"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Эквадор"
+  },
+  {
+    "name": "Египет",
+    "name_en": "Egypt",
+    "country_code": "EG",
+    "abbr": "EGY",
+    "val": "EGP",
+    "code": "+20",
+    "example": "+20 XX XXXX XXXX",
+    "aliases": [
+      "Egypt"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Египет"
+  },
+  {
+    "name": "Сальвадор",
+    "name_en": "El Salvador",
+    "country_code": "SV",
+    "abbr": "SLV",
+    "val": "USD",
+    "code": "+503",
+    "example": "+503 XXXX XXXX",
+    "aliases": [
+      "El Salvador"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Сальвадор"
+  },
+  {
+    "name": "Экваториальная Гвинея",
+    "name_en": "Equatorial Guinea",
+    "country_code": "GQ",
+    "abbr": "GNQ",
+    "val": "XAF",
+    "code": "+240",
+    "example": "+240 XXX XXX XXX",
+    "aliases": [
+      "Equatorial Guinea"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Экваториальная_Гвинея"
+  },
+  {
+    "name": "Эритрея",
+    "name_en": "Eritrea",
+    "country_code": "ER",
+    "abbr": "ERI",
+    "val": "ERN",
+    "code": "+291",
+    "example": "+291 X XXX XXX",
+    "aliases": [
+      "Eritrea"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Эритрея"
+  },
+  {
+    "name": "Эстония",
+    "name_en": "Estonia",
+    "country_code": "EE",
+    "abbr": "EST",
+    "val": "EUR",
+    "code": "+372",
+    "example": "+372 XXXX XXXX",
+    "aliases": [
+      "Estonia",
+      "Eesti"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Эстония"
+  },
+  {
+    "name": "Эсватини",
+    "name_en": "Eswatini",
+    "country_code": "SZ",
+    "abbr": "SWZ",
+    "val": "SZL",
+    "code": "+268",
+    "example": "+268 XX XX XXXX",
+    "aliases": [
+      "Eswatini",
+      "Swaziland"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Эсватини"
+  },
+  {
+    "name": "Эфиопия",
+    "name_en": "Ethiopia",
+    "country_code": "ET",
+    "abbr": "ETH",
+    "val": "ETB",
+    "code": "+251",
+    "example": "+251 XX XXX XXXX",
+    "aliases": [
+      "Ethiopia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Эфиопия"
+  },
+  {
+    "name": "Falkland Islands (Malvinas)",
+    "name_en": "Falkland Islands (Malvinas)",
+    "country_code": "FK",
+    "abbr": "FLK",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Falkland Islands (Malvinas)"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Falkland_Islands_(Malvinas)"
+  },
+  {
+    "name": "Faroe Islands",
+    "name_en": "Faroe Islands",
+    "country_code": "FO",
+    "abbr": "FRO",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Faroe Islands"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Faroe_Islands"
+  },
+  {
+    "name": "Фиджи",
+    "name_en": "Fiji",
+    "country_code": "FJ",
+    "abbr": "FJI",
+    "val": "FJD",
+    "code": "+679",
+    "example": "+679 XXX XXXX",
+    "aliases": [
+      "Fiji"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Фиджи"
+  },
+  {
+    "name": "Финляндия",
+    "name_en": "Finland",
+    "country_code": "FI",
+    "abbr": "FIN",
+    "val": "EUR",
+    "code": "+358",
+    "example": "+358 XX XXX XXXX",
+    "aliases": [
+      "Finland",
+      "Suomi"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Финляндия"
+  },
+  {
+    "name": "Франция",
+    "name_en": "France",
+    "country_code": "FR",
+    "abbr": "FRA",
+    "val": "EUR",
+    "code": "+33",
+    "example": "+33 X XX XX XX XX",
+    "aliases": [
+      "France"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Франция"
+  },
+  {
+    "name": "French Guiana",
+    "name_en": "French Guiana",
+    "country_code": "GF",
+    "abbr": "GUF",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "French Guiana"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/French_Guiana"
+  },
+  {
+    "name": "French Polynesia",
+    "name_en": "French Polynesia",
+    "country_code": "PF",
+    "abbr": "PYF",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "French Polynesia"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/French_Polynesia"
+  },
+  {
+    "name": "French Southern Territories",
+    "name_en": "French Southern Territories",
+    "country_code": "TF",
+    "abbr": "ATF",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "French Southern Territories"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/French_Southern_Territories"
+  },
+  {
+    "name": "Габон",
+    "name_en": "Gabon",
+    "country_code": "GA",
+    "abbr": "GAB",
+    "val": "XAF",
+    "code": "+241",
+    "example": "+241 X XX XX XX",
+    "aliases": [
+      "Gabon"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Габон"
+  },
+  {
+    "name": "Гамбия",
+    "name_en": "Gambia",
+    "country_code": "GM",
+    "abbr": "GMB",
+    "val": "GMD",
+    "code": "+220",
+    "example": "+220 XXX XXXX",
+    "aliases": [
+      "Gambia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Гамбия"
+  },
+  {
+    "name": "Грузия",
+    "name_en": "Georgia",
+    "country_code": "GE",
+    "abbr": "GEO",
+    "val": "GEL",
+    "code": "+995",
+    "example": "+995 XXX XXX XXX",
+    "aliases": [
+      "Georgia",
+      "საქართველო"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Грузия"
+  },
+  {
+    "name": "Германия",
+    "name_en": "Germany",
+    "country_code": "DE",
+    "abbr": "DEU",
+    "val": "EUR",
+    "code": "+49",
+    "example": "+49 XXX XXXXXXX",
+    "aliases": [
+      "Germany",
+      "Deutschland"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Германия"
+  },
+  {
+    "name": "Гана",
+    "name_en": "Ghana",
+    "country_code": "GH",
+    "abbr": "GHA",
+    "val": "GHS",
+    "code": "+233",
+    "example": "+233 XX XXX XXXX",
+    "aliases": [
+      "Ghana"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Гана"
+  },
+  {
+    "name": "Gibraltar",
+    "name_en": "Gibraltar",
+    "country_code": "GI",
+    "abbr": "GIB",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Gibraltar"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Gibraltar"
+  },
+  {
+    "name": "Греция",
+    "name_en": "Greece",
+    "country_code": "GR",
+    "abbr": "GRC",
+    "val": "EUR",
+    "code": "+30",
+    "example": "+30 XXX XXX XXXX",
+    "aliases": [
+      "Greece",
+      "Ελλάδα"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Греция"
+  },
+  {
+    "name": "Greenland",
+    "name_en": "Greenland",
+    "country_code": "GL",
+    "abbr": "GRL",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Greenland"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Greenland"
+  },
+  {
+    "name": "Гренада",
+    "name_en": "Grenada",
+    "country_code": "GD",
+    "abbr": "GRD",
+    "val": "XCD",
+    "code": "+1473",
+    "example": "+1 (473) XXX-XXXX",
+    "aliases": [
+      "Grenada"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Гренада"
+  },
+  {
+    "name": "Guadeloupe",
+    "name_en": "Guadeloupe",
+    "country_code": "GP",
+    "abbr": "GLP",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Guadeloupe"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Guadeloupe"
+  },
+  {
+    "name": "Guam",
+    "name_en": "Guam",
+    "country_code": "GU",
+    "abbr": "GUM",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Guam"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Guam"
+  },
+  {
+    "name": "Гватемала",
+    "name_en": "Guatemala",
+    "country_code": "GT",
+    "abbr": "GTM",
+    "val": "GTQ",
+    "code": "+502",
+    "example": "+502 XXXX XXXX",
+    "aliases": [
+      "Guatemala"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Гватемала"
+  },
+  {
+    "name": "Guernsey",
+    "name_en": "Guernsey",
+    "country_code": "GG",
+    "abbr": "GGY",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Guernsey"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Guernsey"
+  },
+  {
+    "name": "Гвинея",
+    "name_en": "Guinea",
+    "country_code": "GN",
+    "abbr": "GIN",
+    "val": "GNF",
+    "code": "+224",
+    "example": "+224 XXX XXX XXX",
+    "aliases": [
+      "Guinea"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Гвинея"
+  },
+  {
+    "name": "Гвинея-Бисау",
+    "name_en": "Guinea-Bissau",
+    "country_code": "GW",
+    "abbr": "GNB",
+    "val": "XOF",
+    "code": "+245",
+    "example": "+245 XXX XXXX",
+    "aliases": [
+      "Guinea-Bissau"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Гвинея-Бисау"
+  },
+  {
+    "name": "Гайана",
+    "name_en": "Guyana",
+    "country_code": "GY",
+    "abbr": "GUY",
+    "val": "GYD",
+    "code": "+592",
+    "example": "+592 XXX XXXX",
+    "aliases": [
+      "Guyana"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Гайана"
+  },
+  {
+    "name": "Гаити",
+    "name_en": "Haiti",
+    "country_code": "HT",
+    "abbr": "HTI",
+    "val": "HTG",
+    "code": "+509",
+    "example": "+509 XX XX XXXX",
+    "aliases": [
+      "Haiti",
+      "Haïti"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Гаити"
+  },
+  {
+    "name": "Heard Island and McDonald Islands",
+    "name_en": "Heard Island and McDonald Islands",
+    "country_code": "HM",
+    "abbr": "HMD",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Heard Island and McDonald Islands"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Heard_Island_and_McDonald_Islands"
+  },
+  {
+    "name": "Гондурас",
+    "name_en": "Honduras",
+    "country_code": "HN",
+    "abbr": "HND",
+    "val": "HNL",
+    "code": "+504",
+    "example": "+504 XXXX-XXXX",
+    "aliases": [
+      "Honduras"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Гондурас"
+  },
+  {
+    "name": "Hong Kong",
+    "name_en": "Hong Kong",
+    "country_code": "HK",
+    "abbr": "HKG",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Hong Kong"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Hong_Kong"
+  },
+  {
+    "name": "Венгрия",
+    "name_en": "Hungary",
+    "country_code": "HU",
+    "abbr": "HUN",
+    "val": "HUF",
+    "code": "+36",
+    "example": "+36 XX XXX XXXX",
+    "aliases": [
+      "Hungary",
+      "Magyarország"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Венгрия"
+  },
+  {
+    "name": "Исландия",
+    "name_en": "Iceland",
+    "country_code": "IS",
+    "abbr": "ISL",
+    "val": "ISK",
+    "code": "+354",
+    "example": "+354 XXX XXXX",
+    "aliases": [
+      "Iceland",
+      "Ísland"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Исландия"
+  },
+  {
+    "name": "Индия",
+    "name_en": "India",
+    "country_code": "IN",
+    "abbr": "IND",
+    "val": "INR",
+    "code": "+91",
+    "example": "+91 XXXXX XXXXX",
+    "aliases": [
+      "India",
+      "भारत"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Индия"
+  },
+  {
+    "name": "Индонезия",
+    "name_en": "Indonesia",
+    "country_code": "ID",
+    "abbr": "IDN",
+    "val": "IDR",
+    "code": "+62",
+    "example": "+62 XXX-XXX-XXXX",
+    "aliases": [
+      "Indonesia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Индонезия"
+  },
+  {
+    "name": "Иран",
+    "name_en": "Iran",
+    "country_code": "IR",
+    "abbr": "IRN",
+    "val": "IRR",
+    "code": "+98",
+    "example": "+98 XXX XXX XXXX",
+    "aliases": [
+      "Iran"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Иран"
+  },
+  {
+    "name": "Ирак",
+    "name_en": "Iraq",
+    "country_code": "IQ",
+    "abbr": "IRQ",
+    "val": "IQD",
+    "code": "+964",
+    "example": "+964 XXX XXX XXXX",
+    "aliases": [
+      "Iraq"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Ирак"
+  },
+  {
+    "name": "Ирландия",
+    "name_en": "Ireland",
+    "country_code": "IE",
+    "abbr": "IRL",
+    "val": "EUR",
+    "code": "+353",
+    "example": "+353 XX XXX XXXX",
+    "aliases": [
+      "Ireland",
+      "Éire"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Ирландия"
+  },
+  {
+    "name": "Isle of Man",
+    "name_en": "Isle of Man",
+    "country_code": "IM",
+    "abbr": "IMN",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Isle of Man"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Isle_of_Man"
+  },
+  {
+    "name": "Израиль",
+    "name_en": "Israel",
+    "country_code": "IL",
+    "abbr": "ISR",
+    "val": "ILS",
+    "code": "+972",
+    "example": "+972 XX-XXX-XXXX",
+    "aliases": [
+      "Israel"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Израиль"
+  },
+  {
+    "name": "Италия",
+    "name_en": "Italy",
+    "country_code": "IT",
+    "abbr": "ITA",
+    "val": "EUR",
+    "code": "+39",
+    "example": "+39 XXX XXX XXXX",
+    "aliases": [
+      "Italy",
+      "Italia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Италия"
+  },
+  {
+    "name": "Кот-д'Ивуар",
+    "name_en": "Ivory Coast",
+    "country_code": "CI",
+    "abbr": "CIV",
+    "val": "XOF",
+    "code": "+225",
+    "example": "+225 XX XX XX XX",
+    "aliases": [
+      "Ivory Coast",
+      "Côte d'Ivoire"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Кот-д'Ивуар"
+  },
+  {
+    "name": "Ямайка",
+    "name_en": "Jamaica",
+    "country_code": "JM",
+    "abbr": "JAM",
+    "val": "JMD",
+    "code": "+1876",
+    "example": "+1 (876) XXX-XXXX",
+    "aliases": [
+      "Jamaica"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Ямайка"
+  },
+  {
+    "name": "Япония",
+    "name_en": "Japan",
+    "country_code": "JP",
+    "abbr": "JPN",
+    "val": "JPY",
+    "code": "+81",
+    "example": "+81 XX XXXX XXXX",
+    "aliases": [
+      "Japan",
+      "日本"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Япония"
+  },
+  {
+    "name": "Jersey",
+    "name_en": "Jersey",
+    "country_code": "JE",
+    "abbr": "JEY",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Jersey"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Jersey"
+  },
+  {
+    "name": "Иордания",
+    "name_en": "Jordan",
+    "country_code": "JO",
+    "abbr": "JOR",
+    "val": "JOD",
+    "code": "+962",
+    "example": "+962 X XXXX XXXX",
+    "aliases": [
+      "Jordan"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Иордания"
+  },
+  {
+    "name": "Казахстан",
+    "name_en": "Kazakhstan",
+    "country_code": "KZ",
+    "abbr": "KAZ",
+    "val": "KZT",
+    "code": "+7",
+    "example": "+7 XXX XXX XX XX",
+    "aliases": [
+      "Kazakhstan",
+      "Қазақстан"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Казахстан"
+  },
+  {
+    "name": "Кения",
+    "name_en": "Kenya",
+    "country_code": "KE",
+    "abbr": "KEN",
+    "val": "KES",
+    "code": "+254",
+    "example": "+254 XXX XXXXXX",
+    "aliases": [
+      "Kenya"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Кения"
+  },
+  {
+    "name": "Кирибати",
+    "name_en": "Kiribati",
+    "country_code": "KI",
+    "abbr": "KIR",
+    "val": "AUD",
+    "code": "+686",
+    "example": "+686 XXXXX",
+    "aliases": [
+      "Kiribati"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Кирибати"
+  },
+  {
+    "name": "Кувейт",
+    "name_en": "Kuwait",
+    "country_code": "KW",
+    "abbr": "KWT",
+    "val": "KWD",
+    "code": "+965",
+    "example": "+965 XXXX XXXX",
+    "aliases": [
+      "Kuwait"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Кувейт"
+  },
+  {
+    "name": "Киргизия",
+    "name_en": "Kyrgyzstan",
+    "country_code": "KG",
+    "abbr": "KGZ",
+    "val": "KGS",
+    "code": "+996",
+    "example": "+996 XXX XXX XXX",
+    "aliases": [
+      "Kyrgyzstan",
+      "Кыргызстан"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Киргизия"
+  },
+  {
+    "name": "Лаос",
+    "name_en": "Laos",
+    "country_code": "LA",
+    "abbr": "LAO",
+    "val": "LAK",
+    "code": "+856",
+    "example": "+856 XX XXX XXX",
+    "aliases": [
+      "Laos"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Лаос"
+  },
+  {
+    "name": "Латвия",
+    "name_en": "Latvia",
+    "country_code": "LV",
+    "abbr": "LVA",
+    "val": "EUR",
+    "code": "+371",
+    "example": "+371 XX XXX XXX",
+    "aliases": [
+      "Latvia",
+      "Latvija"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Латвия"
+  },
+  {
+    "name": "Ливан",
+    "name_en": "Lebanon",
+    "country_code": "LB",
+    "abbr": "LBN",
+    "val": "LBP",
+    "code": "+961",
+    "example": "+961 XX XXX XXX",
+    "aliases": [
+      "Lebanon"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Ливан"
+  },
+  {
+    "name": "Лесото",
+    "name_en": "Lesotho",
+    "country_code": "LS",
+    "abbr": "LSO",
+    "val": "LSL",
+    "code": "+266",
+    "example": "+266 XX XXX XXX",
+    "aliases": [
+      "Lesotho"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Лесото"
+  },
+  {
+    "name": "Либерия",
+    "name_en": "Liberia",
+    "country_code": "LR",
+    "abbr": "LBR",
+    "val": "LRD",
+    "code": "+231",
+    "example": "+231 XX XXX XXX",
+    "aliases": [
+      "Liberia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Либерия"
+  },
+  {
+    "name": "Ливия",
+    "name_en": "Libya",
+    "country_code": "LY",
+    "abbr": "LBY",
+    "val": "LYD",
+    "code": "+218",
+    "example": "+218 XX XXX XXXX",
+    "aliases": [
+      "Libya"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Ливия"
+  },
+  {
+    "name": "Лихтенштейн",
+    "name_en": "Liechtenstein",
+    "country_code": "LI",
+    "abbr": "LIE",
+    "val": "CHF",
+    "code": "+423",
+    "example": "+423 XXX XXXX",
+    "aliases": [
+      "Liechtenstein"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Лихтенштейн"
+  },
+  {
+    "name": "Литва",
+    "name_en": "Lithuania",
+    "country_code": "LT",
+    "abbr": "LTU",
+    "val": "EUR",
+    "code": "+370",
+    "example": "+370 XXX XXXXX",
+    "aliases": [
+      "Lithuania",
+      "Lietuva"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Литва"
+  },
+  {
+    "name": "Люксембург",
+    "name_en": "Luxembourg",
+    "country_code": "LU",
+    "abbr": "LUX",
+    "val": "EUR",
+    "code": "+352",
+    "example": "+352 XXX XXX XXX",
+    "aliases": [
+      "Luxembourg",
+      "Lëtzebuerg"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Люксембург"
+  },
+  {
+    "name": "Macao",
+    "name_en": "Macao",
+    "country_code": "MO",
+    "abbr": "MAC",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Macao"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Macao"
+  },
+  {
+    "name": "Мадагаскар",
+    "name_en": "Madagascar",
+    "country_code": "MG",
+    "abbr": "MDG",
+    "val": "MGA",
+    "code": "+261",
+    "example": "+261 XX XX XXX XX",
+    "aliases": [
+      "Madagascar"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Мадагаскар"
+  },
+  {
+    "name": "Малави",
+    "name_en": "Malawi",
+    "country_code": "MW",
+    "abbr": "MWI",
+    "val": "MWK",
+    "code": "+265",
+    "example": "+265 X XXX XXXX",
+    "aliases": [
+      "Malawi"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Малави"
+  },
+  {
+    "name": "Малайзия",
+    "name_en": "Malaysia",
+    "country_code": "MY",
+    "abbr": "MYS",
+    "val": "MYR",
+    "code": "+60",
+    "example": "+60 XX-XXX XXXX",
+    "aliases": [
+      "Malaysia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Малайзия"
+  },
+  {
+    "name": "Мальдивы",
+    "name_en": "Maldives",
+    "country_code": "MV",
+    "abbr": "MDV",
+    "val": "MVR",
+    "code": "+960",
+    "example": "+960 XXX-XXXX",
+    "aliases": [
+      "Maldives"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Мальдивы"
+  },
+  {
+    "name": "Мали",
+    "name_en": "Mali",
+    "country_code": "ML",
+    "abbr": "MLI",
+    "val": "XOF",
+    "code": "+223",
+    "example": "+223 XX XX XX XX",
+    "aliases": [
+      "Mali"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Мали"
+  },
+  {
+    "name": "Мальта",
+    "name_en": "Malta",
+    "country_code": "MT",
+    "abbr": "MLT",
+    "val": "EUR",
+    "code": "+356",
+    "example": "+356 XXXX XXXX",
+    "aliases": [
+      "Malta"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Мальта"
+  },
+  {
+    "name": "Маршалловы Острова",
+    "name_en": "Marshall Islands",
+    "country_code": "MH",
+    "abbr": "MHL",
+    "val": "USD",
+    "code": "+692",
+    "example": "+692 XXX-XXXX",
+    "aliases": [
+      "Marshall Islands"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Маршалловы_Острова"
+  },
+  {
+    "name": "Martinique",
+    "name_en": "Martinique",
+    "country_code": "MQ",
+    "abbr": "MTQ",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Martinique"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Martinique"
+  },
+  {
+    "name": "Мавритания",
+    "name_en": "Mauritania",
+    "country_code": "MR",
+    "abbr": "MRT",
+    "val": "MRU",
+    "code": "+222",
+    "example": "+222 XX XX XX XX",
+    "aliases": [
+      "Mauritania"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Мавритания"
+  },
+  {
+    "name": "Маврикий",
+    "name_en": "Mauritius",
+    "country_code": "MU",
+    "abbr": "MUS",
+    "val": "MUR",
+    "code": "+230",
+    "example": "+230 XXX XXXX",
+    "aliases": [
+      "Mauritius"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Маврикий"
+  },
+  {
+    "name": "Mayotte",
+    "name_en": "Mayotte",
+    "country_code": "YT",
+    "abbr": "MYT",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Mayotte"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Mayotte"
+  },
+  {
+    "name": "Мексика",
+    "name_en": "Mexico",
+    "country_code": "MX",
+    "abbr": "MEX",
+    "val": "MXN",
+    "code": "+52",
+    "example": "+52 XXX XXX XXXX",
+    "aliases": [
+      "Mexico",
+      "México"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Мексика"
+  },
+  {
+    "name": "Микронезия",
+    "name_en": "Micronesia",
+    "country_code": "FM",
+    "abbr": "FSM",
+    "val": "USD",
+    "code": "+691",
+    "example": "+691 XXX XXXX",
+    "aliases": [
+      "Micronesia",
+      "FSM"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Федеративные_Штаты_Микронезии"
+  },
+  {
+    "name": "Молдова",
+    "name_en": "Moldova",
+    "country_code": "MD",
+    "abbr": "MDA",
+    "val": "MDL",
+    "code": "+373",
+    "example": "+373 XXXX XXXX",
+    "aliases": [
+      "Moldova"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Молдова"
+  },
+  {
+    "name": "Монако",
+    "name_en": "Monaco",
+    "country_code": "MC",
+    "abbr": "MCO",
+    "val": "EUR",
+    "code": "+377",
+    "example": "+377 XX XX XX XX",
+    "aliases": [
+      "Monaco"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Монако"
+  },
+  {
+    "name": "Монголия",
+    "name_en": "Mongolia",
+    "country_code": "MN",
+    "abbr": "MNG",
+    "val": "MNT",
+    "code": "+976",
+    "example": "+976 XXXX XXXX",
+    "aliases": [
+      "Mongolia",
+      "Монгол Улс"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Монголия"
+  },
+  {
+    "name": "Черногория",
+    "name_en": "Montenegro",
+    "country_code": "ME",
+    "abbr": "MNE",
+    "val": "EUR",
+    "code": "+382",
+    "example": "+382 XX XXX XXX",
+    "aliases": [
+      "Montenegro",
+      "Црна Гора"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Черногория"
+  },
+  {
+    "name": "Montserrat",
+    "name_en": "Montserrat",
+    "country_code": "MS",
+    "abbr": "MSR",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Montserrat"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Montserrat"
+  },
+  {
+    "name": "Марокко",
+    "name_en": "Morocco",
+    "country_code": "MA",
+    "abbr": "MAR",
+    "val": "MAD",
+    "code": "+212",
+    "example": "+212 XXX-XXXXXX",
+    "aliases": [
+      "Morocco"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Марокко"
+  },
+  {
+    "name": "Мозамбик",
+    "name_en": "Mozambique",
+    "country_code": "MZ",
+    "abbr": "MOZ",
+    "val": "MZN",
+    "code": "+258",
+    "example": "+258 XX XXX XXXX",
+    "aliases": [
+      "Mozambique"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Мозамбик"
+  },
+  {
+    "name": "Мьянма",
+    "name_en": "Myanmar",
+    "country_code": "MM",
+    "abbr": "MMR",
+    "val": "MMK",
+    "code": "+95",
+    "example": "+95 X XXX XXXX",
+    "aliases": [
+      "Myanmar",
+      "Burma"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Мьянма"
+  },
+  {
+    "name": "Намибия",
+    "name_en": "Namibia",
+    "country_code": "NA",
+    "abbr": "NAM",
+    "val": "NAD",
+    "code": "+264",
+    "example": "+264 XX XXX XXXX",
+    "aliases": [
+      "Namibia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Намибия"
+  },
+  {
+    "name": "Науру",
+    "name_en": "Nauru",
+    "country_code": "NR",
+    "abbr": "NRU",
+    "val": "AUD",
+    "code": "+674",
+    "example": "+674 XXX XXXX",
+    "aliases": [
+      "Nauru"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Науру"
+  },
+  {
+    "name": "Непал",
+    "name_en": "Nepal",
+    "country_code": "NP",
+    "abbr": "NPL",
+    "val": "NPR",
+    "code": "+977",
+    "example": "+977 XXX-XXX-XXXX",
+    "aliases": [
+      "Nepal",
+      "नेपाल"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Непал"
+  },
+  {
+    "name": "Нидерланды",
+    "name_en": "Netherlands",
+    "country_code": "NL",
+    "abbr": "NLD",
+    "val": "EUR",
+    "code": "+31",
+    "example": "+31 X XXXX XXXX",
+    "aliases": [
+      "Netherlands",
+      "Nederland"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Нидерланды"
+  },
+  {
+    "name": "New Caledonia",
+    "name_en": "New Caledonia",
+    "country_code": "NC",
+    "abbr": "NCL",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "New Caledonia"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/New_Caledonia"
+  },
+  {
+    "name": "Новая Зеландия",
+    "name_en": "New Zealand",
+    "country_code": "NZ",
+    "abbr": "NZL",
+    "val": "NZD",
+    "code": "+64",
+    "example": "+64 XX XXX XXXX",
+    "aliases": [
+      "New Zealand",
+      "Aotearoa"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Новая_Зеландия"
+  },
+  {
+    "name": "Никарагуа",
+    "name_en": "Nicaragua",
+    "country_code": "NI",
+    "abbr": "NIC",
+    "val": "NIO",
+    "code": "+505",
+    "example": "+505 XXXX XXXX",
+    "aliases": [
+      "Nicaragua"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Никарагуа"
+  },
+  {
+    "name": "Нигер",
+    "name_en": "Niger",
+    "country_code": "NE",
+    "abbr": "NER",
+    "val": "XOF",
+    "code": "+227",
+    "example": "+227 XX XX XX XX",
+    "aliases": [
+      "Niger"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Нигер"
+  },
+  {
+    "name": "Нигерия",
+    "name_en": "Nigeria",
+    "country_code": "NG",
+    "abbr": "NGA",
+    "val": "NGN",
+    "code": "+234",
+    "example": "+234 XXX XXX XXXX",
+    "aliases": [
+      "Nigeria"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Нигерия"
+  },
+  {
+    "name": "Niue",
+    "name_en": "Niue",
+    "country_code": "NU",
+    "abbr": "NIU",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Niue"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Niue"
+  },
+  {
+    "name": "Norfolk Island",
+    "name_en": "Norfolk Island",
+    "country_code": "NF",
+    "abbr": "NFK",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Norfolk Island"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Norfolk_Island"
+  },
+  {
+    "name": "КНДР",
+    "name_en": "North Korea",
+    "country_code": "KP",
+    "abbr": "PRK",
+    "val": "KPW",
+    "code": "+850",
+    "example": "+850 XXX XXX XXXX",
+    "aliases": [
+      "North Korea",
+      "조선민주주의인민공화국"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/КНДР"
+  },
+  {
+    "name": "Северная Македония",
+    "name_en": "North Macedonia",
+    "country_code": "MK",
+    "abbr": "MKD",
+    "val": "MKD",
+    "code": "+389",
+    "example": "+389 XX XXX XXX",
+    "aliases": [
+      "North Macedonia",
+      "Macedonia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Северная_Македония"
+  },
+  {
+    "name": "Northern Mariana Islands",
+    "name_en": "Northern Mariana Islands",
+    "country_code": "MP",
+    "abbr": "MNP",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Northern Mariana Islands"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Northern_Mariana_Islands"
+  },
+  {
+    "name": "Норвегия",
+    "name_en": "Norway",
+    "country_code": "NO",
+    "abbr": "NOR",
+    "val": "NOK",
+    "code": "+47",
+    "example": "+47 XXX XX XXX",
+    "aliases": [
+      "Norway",
+      "Norge"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Норвегия"
+  },
+  {
+    "name": "Оман",
+    "name_en": "Oman",
+    "country_code": "OM",
+    "abbr": "OMN",
+    "val": "OMR",
+    "code": "+968",
+    "example": "+968 XXXX XXXX",
+    "aliases": [
+      "Oman"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Оман"
+  },
+  {
+    "name": "Пакистан",
+    "name_en": "Pakistan",
+    "country_code": "PK",
+    "abbr": "PAK",
+    "val": "PKR",
+    "code": "+92",
+    "example": "+92 XXX XXX XXXX",
+    "aliases": [
+      "Pakistan",
+      "پاکستان"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Пакистан"
+  },
+  {
+    "name": "Палау",
+    "name_en": "Palau",
+    "country_code": "PW",
+    "abbr": "PLW",
+    "val": "USD",
+    "code": "+680",
+    "example": "+680 XXX XXXX",
+    "aliases": [
+      "Palau"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Палау"
+  },
+  {
+    "name": "Palestine, State of",
+    "name_en": "Palestine, State of",
+    "country_code": "PS",
+    "abbr": "PSE",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Palestine, State of"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Palestine,_State_of"
+  },
+  {
+    "name": "Панама",
+    "name_en": "Panama",
+    "country_code": "PA",
+    "abbr": "PAN",
+    "val": "PAB",
+    "code": "+507",
+    "example": "+507 XXXX-XXXX",
+    "aliases": [
+      "Panama",
+      "Panamá"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Панама"
+  },
+  {
+    "name": "Папуа — Новая Гвинея",
+    "name_en": "Papua New Guinea",
+    "country_code": "PG",
+    "abbr": "PNG",
+    "val": "PGK",
+    "code": "+675",
+    "example": "+675 XXXX XXXX",
+    "aliases": [
+      "Papua New Guinea",
+      "PNG"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Папуа_—_Новая_Гвинея"
+  },
+  {
+    "name": "Парагвай",
+    "name_en": "Paraguay",
+    "country_code": "PY",
+    "abbr": "PRY",
+    "val": "PYG",
+    "code": "+595",
+    "example": "+595 XXX XXX XXX",
+    "aliases": [
+      "Paraguay"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Парагвай"
+  },
+  {
+    "name": "Перу",
+    "name_en": "Peru",
+    "country_code": "PE",
+    "abbr": "PER",
+    "val": "PEN",
+    "code": "+51",
+    "example": "+51 XXX XXX XXX",
+    "aliases": [
+      "Peru",
+      "Perú"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Перу"
+  },
+  {
+    "name": "Филиппины",
+    "name_en": "Philippines",
+    "country_code": "PH",
+    "abbr": "PHL",
+    "val": "PHP",
+    "code": "+63",
+    "example": "+63 XXX XXX XXXX",
+    "aliases": [
+      "Philippines"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Филиппины"
+  },
+  {
+    "name": "Pitcairn",
+    "name_en": "Pitcairn",
+    "country_code": "PN",
+    "abbr": "PCN",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Pitcairn"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Pitcairn"
+  },
+  {
+    "name": "Польша",
+    "name_en": "Poland",
+    "country_code": "PL",
+    "abbr": "POL",
+    "val": "PLN",
+    "code": "+48",
+    "example": "+48 XXX XXX XXX",
+    "aliases": [
+      "Poland",
+      "Polska"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Польша"
+  },
+  {
+    "name": "Португалия",
+    "name_en": "Portugal",
+    "country_code": "PT",
+    "abbr": "PRT",
+    "val": "EUR",
+    "code": "+351",
+    "example": "+351 XXX XXX XXX",
+    "aliases": [
+      "Portugal"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Португалия"
+  },
+  {
+    "name": "Puerto Rico",
+    "name_en": "Puerto Rico",
+    "country_code": "PR",
+    "abbr": "PRI",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Puerto Rico"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Puerto_Rico"
+  },
+  {
+    "name": "Катар",
+    "name_en": "Qatar",
+    "country_code": "QA",
+    "abbr": "QAT",
+    "val": "QAR",
+    "code": "+974",
+    "example": "+974 XXXX XXXX",
+    "aliases": [
+      "Qatar"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Катар"
+  },
+  {
+    "name": "Республика Конго",
+    "name_en": "Republic of the Congo",
+    "country_code": "CG",
+    "abbr": "COG",
+    "val": "XAF",
+    "code": "+242",
+    "example": "+242 XX XXX XXXX",
+    "aliases": [
+      "Republic of the Congo",
+      "Congo-Brazzaville"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Республика_Конго"
+  },
+  {
+    "name": "Румыния",
+    "name_en": "Romania",
+    "country_code": "RO",
+    "abbr": "ROU",
+    "val": "RON",
+    "code": "+40",
+    "example": "+40 XXX XXX XXX",
+    "aliases": [
+      "Romania",
+      "România"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Румыния"
+  },
+  {
+    "name": "Россия",
+    "name_en": "Russia",
+    "country_code": "RU",
+    "abbr": "RUS",
+    "val": "RUB",
+    "code": "+7",
+    "example": "+7 XXX XXX-XX-XX",
+    "aliases": [
+      "Russia",
+      "Россия",
+      "Russian Federation"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Россия"
+  },
+  {
+    "name": "Руанда",
+    "name_en": "Rwanda",
+    "country_code": "RW",
+    "abbr": "RWA",
+    "val": "RWF",
+    "code": "+250",
+    "example": "+250 XXX XXX XXX",
+    "aliases": [
+      "Rwanda"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Руанда"
+  },
+  {
+    "name": "Réunion",
+    "name_en": "Réunion",
+    "country_code": "RE",
+    "abbr": "REU",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Réunion"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Réunion"
+  },
+  {
+    "name": "Saint Barthélemy",
+    "name_en": "Saint Barthélemy",
+    "country_code": "BL",
+    "abbr": "BLM",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Saint Barthélemy"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Saint_Barthélemy"
+  },
+  {
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "name_en": "Saint Helena, Ascension and Tristan da Cunha",
+    "country_code": "SH",
+    "abbr": "SHN",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Saint Helena, Ascension and Tristan da Cunha"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Saint_Helena,_Ascension_and_Tristan_da_Cunha"
+  },
+  {
+    "name": "Сент-Китс и Невис",
+    "name_en": "Saint Kitts and Nevis",
+    "country_code": "KN",
+    "abbr": "KNA",
+    "val": "XCD",
+    "code": "+1869",
+    "example": "+1 (869) XXX-XXXX",
+    "aliases": [
+      "Saint Kitts and Nevis"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Сент-Китс_и_Невис"
+  },
+  {
+    "name": "Сент-Люсия",
+    "name_en": "Saint Lucia",
+    "country_code": "LC",
+    "abbr": "LCA",
+    "val": "XCD",
+    "code": "+1758",
+    "example": "+1 (758) XXX-XXXX",
+    "aliases": [
+      "Saint Lucia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Сент-Люсия"
+  },
+  {
+    "name": "Saint Martin (French part)",
+    "name_en": "Saint Martin (French part)",
+    "country_code": "MF",
+    "abbr": "MAF",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Saint Martin (French part)"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Saint_Martin_(French_part)"
+  },
+  {
+    "name": "Saint Pierre and Miquelon",
+    "name_en": "Saint Pierre and Miquelon",
+    "country_code": "PM",
+    "abbr": "SPM",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Saint Pierre and Miquelon"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Saint_Pierre_and_Miquelon"
+  },
+  {
+    "name": "Сент-Винсент и Гренадины",
+    "name_en": "Saint Vincent and the Grenadines",
+    "country_code": "VC",
+    "abbr": "VCT",
+    "val": "XCD",
+    "code": "+1784",
+    "example": "+1 (784) XXX-XXXX",
+    "aliases": [
+      "Saint Vincent and the Grenadines"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Сент-Винсент_и_Гренадины"
+  },
+  {
+    "name": "Самоа",
+    "name_en": "Samoa",
+    "country_code": "WS",
+    "abbr": "WSM",
+    "val": "WST",
+    "code": "+685",
+    "example": "+685 XXXXX",
+    "aliases": [
+      "Samoa"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Самоа"
+  },
+  {
+    "name": "Сан-Марино",
+    "name_en": "San Marino",
+    "country_code": "SM",
+    "abbr": "SMR",
+    "val": "EUR",
+    "code": "+378",
+    "example": "+378 XXXX XXXXXX",
+    "aliases": [
+      "San Marino"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Сан-Марино"
+  },
+  {
+    "name": "Саудовская Аравия",
+    "name_en": "Saudi Arabia",
+    "country_code": "SA",
+    "abbr": "SAU",
+    "val": "SAR",
+    "code": "+966",
+    "example": "+966 XX XXX XXXX",
+    "aliases": [
+      "Saudi Arabia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Саудовская_Аравия"
+  },
+  {
+    "name": "Сенегал",
+    "name_en": "Senegal",
+    "country_code": "SN",
+    "abbr": "SEN",
+    "val": "XOF",
+    "code": "+221",
+    "example": "+221 XX XXX XX XX",
+    "aliases": [
+      "Senegal"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Сенегал"
+  },
+  {
+    "name": "Сербия",
+    "name_en": "Serbia",
+    "country_code": "RS",
+    "abbr": "SRB",
+    "val": "RSD",
+    "code": "+381",
+    "example": "+381 XX XXX XXXX",
+    "aliases": [
+      "Serbia",
+      "Србија"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Сербия"
+  },
+  {
+    "name": "Сейшелы",
+    "name_en": "Seychelles",
+    "country_code": "SC",
+    "abbr": "SYC",
+    "val": "SCR",
+    "code": "+248",
+    "example": "+248 X XX XX XX",
+    "aliases": [
+      "Seychelles"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Сейшелы"
+  },
+  {
+    "name": "Сьерра-Леоне",
+    "name_en": "Sierra Leone",
+    "country_code": "SL",
+    "abbr": "SLE",
+    "val": "SLL",
+    "code": "+232",
+    "example": "+232 XX XXX XXX",
+    "aliases": [
+      "Sierra Leone"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Сьерра-Леоне"
+  },
+  {
+    "name": "Сингапур",
+    "name_en": "Singapore",
+    "country_code": "SG",
+    "abbr": "SGP",
+    "val": "SGD",
+    "code": "+65",
+    "example": "+65 XXXX XXXX",
+    "aliases": [
+      "Singapore"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Сингапур"
+  },
+  {
+    "name": "Sint Maarten (Dutch part)",
+    "name_en": "Sint Maarten (Dutch part)",
+    "country_code": "SX",
+    "abbr": "SXM",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Sint Maarten (Dutch part)"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Sint_Maarten_(Dutch_part)"
+  },
+  {
+    "name": "Словакия",
+    "name_en": "Slovakia",
+    "country_code": "SK",
+    "abbr": "SVK",
+    "val": "EUR",
+    "code": "+421",
+    "example": "+421 XXX XXX XXX",
+    "aliases": [
+      "Slovakia",
+      "Slovensko"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Словакия"
+  },
+  {
+    "name": "Словения",
+    "name_en": "Slovenia",
+    "country_code": "SI",
+    "abbr": "SVN",
+    "val": "EUR",
+    "code": "+386",
+    "example": "+386 XX XXX XXX",
+    "aliases": [
+      "Slovenia",
+      "Slovenija"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Словения"
+  },
+  {
+    "name": "Соломоновы Острова",
+    "name_en": "Solomon Islands",
+    "country_code": "SB",
+    "abbr": "SLB",
+    "val": "SBD",
+    "code": "+677",
+    "example": "+677 XXXXX",
+    "aliases": [
+      "Solomon Islands"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Соломоновы_Острова"
+  },
+  {
+    "name": "Сомали",
+    "name_en": "Somalia",
+    "country_code": "SO",
+    "abbr": "SOM",
+    "val": "SOS",
+    "code": "+252",
+    "example": "+252 XX XXX XXX",
+    "aliases": [
+      "Somalia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Сомали"
+  },
+  {
+    "name": "ЮАР",
+    "name_en": "South Africa",
+    "country_code": "ZA",
+    "abbr": "ZAF",
+    "val": "ZAR",
+    "code": "+27",
+    "example": "+27 XX XXX XXXX",
+    "aliases": [
+      "South Africa"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/ЮАР"
+  },
+  {
+    "name": "South Georgia and the South Sandwich Islands",
+    "name_en": "South Georgia and the South Sandwich Islands",
+    "country_code": "GS",
+    "abbr": "SGS",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "South Georgia and the South Sandwich Islands"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/South_Georgia_and_the_South_Sandwich_Islands"
+  },
+  {
+    "name": "Южная Корея",
+    "name_en": "South Korea",
+    "country_code": "KR",
+    "abbr": "KOR",
+    "val": "KRW",
+    "code": "+82",
+    "example": "+82 XX XXXX XXXX",
+    "aliases": [
+      "South Korea",
+      "대한민국"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Республика_Корея"
+  },
+  {
+    "name": "Южный Судан",
+    "name_en": "South Sudan",
+    "country_code": "SS",
+    "abbr": "SSD",
+    "val": "SSP",
+    "code": "+211",
+    "example": "+211 XXX XXX XXX",
+    "aliases": [
+      "South Sudan"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Южный_Судан"
+  },
+  {
+    "name": "Испания",
+    "name_en": "Spain",
+    "country_code": "ES",
+    "abbr": "ESP",
+    "val": "EUR",
+    "code": "+34",
+    "example": "+34 XXX XXX XXX",
+    "aliases": [
+      "Spain",
+      "España"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Испания"
+  },
+  {
+    "name": "Шри-Ланка",
+    "name_en": "Sri Lanka",
+    "country_code": "LK",
+    "abbr": "LKA",
+    "val": "LKR",
+    "code": "+94",
+    "example": "+94 XX XXX XXXX",
+    "aliases": [
+      "Sri Lanka",
+      "ශ්‍රී ලංකා"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Шри-Ланка"
+  },
+  {
+    "name": "Судан",
+    "name_en": "Sudan",
+    "country_code": "SD",
+    "abbr": "SDN",
+    "val": "SDG",
+    "code": "+249",
+    "example": "+249 XXX XXX XXX",
+    "aliases": [
+      "Sudan"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Судан"
+  },
+  {
+    "name": "Суринам",
+    "name_en": "Suriname",
+    "country_code": "SR",
+    "abbr": "SUR",
+    "val": "SRD",
+    "code": "+597",
+    "example": "+597 XXX-XXXX",
+    "aliases": [
+      "Suriname"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Суринам"
+  },
+  {
+    "name": "Svalbard and Jan Mayen",
+    "name_en": "Svalbard and Jan Mayen",
+    "country_code": "SJ",
+    "abbr": "SJM",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Svalbard and Jan Mayen"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Svalbard_and_Jan_Mayen"
+  },
+  {
+    "name": "Швеция",
+    "name_en": "Sweden",
+    "country_code": "SE",
+    "abbr": "SWE",
+    "val": "SEK",
+    "code": "+46",
+    "example": "+46 XX XXX XX XX",
+    "aliases": [
+      "Sweden",
+      "Sverige"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Швеция"
+  },
+  {
+    "name": "Швейцария",
+    "name_en": "Switzerland",
+    "country_code": "CH",
+    "abbr": "CHE",
+    "val": "CHF",
+    "code": "+41",
+    "example": "+41 XX XXX XX XX",
+    "aliases": [
+      "Switzerland",
+      "Schweiz",
+      "Suisse",
+      "Svizzera"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Швейцария"
+  },
+  {
+    "name": "Сирия",
+    "name_en": "Syria",
+    "country_code": "SY",
+    "abbr": "SYR",
+    "val": "SYP",
+    "code": "+963",
+    "example": "+963 XXX XXX XXX",
+    "aliases": [
+      "Syria"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Сирия"
+  },
+  {
+    "name": "Сан-Томе и Принсипи",
+    "name_en": "São Tomé and Príncipe",
+    "country_code": "ST",
+    "abbr": "STP",
+    "val": "STN",
+    "code": "+239",
+    "example": "+239 XXX XXXX",
+    "aliases": [
+      "São Tomé and Príncipe"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Сан-Томе_и_Принсипи"
+  },
+  {
+    "name": "Taiwan, Province of China",
+    "name_en": "Taiwan, Province of China",
+    "country_code": "TW",
+    "abbr": "TWN",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Taiwan, Province of China"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Taiwan,_Province_of_China"
+  },
+  {
+    "name": "Таджикистан",
+    "name_en": "Tajikistan",
+    "country_code": "TJ",
+    "abbr": "TJK",
+    "val": "TJS",
+    "code": "+992",
+    "example": "+992 XXX XXX XXX",
+    "aliases": [
+      "Tajikistan",
+      "Тоҷикистон"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Таджикистан"
+  },
+  {
+    "name": "Танзания",
+    "name_en": "Tanzania",
+    "country_code": "TZ",
+    "abbr": "TZA",
+    "val": "TZS",
+    "code": "+255",
+    "example": "+255 XXX XXX XXX",
+    "aliases": [
+      "Tanzania"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Танзания"
+  },
+  {
+    "name": "Таиланд",
+    "name_en": "Thailand",
+    "country_code": "TH",
+    "abbr": "THA",
+    "val": "THB",
+    "code": "+66",
+    "example": "+66 XX XXX XXXX",
+    "aliases": [
+      "Thailand",
+      "ประเทศไทย"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Таиланд"
+  },
+  {
+    "name": "Того",
+    "name_en": "Togo",
+    "country_code": "TG",
+    "abbr": "TGO",
+    "val": "XOF",
+    "code": "+228",
+    "example": "+228 XX XX XX XX",
+    "aliases": [
+      "Togo"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Того"
+  },
+  {
+    "name": "Tokelau",
+    "name_en": "Tokelau",
+    "country_code": "TK",
+    "abbr": "TKL",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Tokelau"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Tokelau"
+  },
+  {
+    "name": "Тонга",
+    "name_en": "Tonga",
+    "country_code": "TO",
+    "abbr": "TON",
+    "val": "TOP",
+    "code": "+676",
+    "example": "+676 XXXXX",
+    "aliases": [
+      "Tonga"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Тонга"
+  },
+  {
+    "name": "Тринидад и Тобаго",
+    "name_en": "Trinidad and Tobago",
+    "country_code": "TT",
+    "abbr": "TTO",
+    "val": "TTD",
+    "code": "+1868",
+    "example": "+1 (868) XXX-XXXX",
+    "aliases": [
+      "Trinidad and Tobago"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Тринидад_и_Тобаго"
+  },
+  {
+    "name": "Тунис",
+    "name_en": "Tunisia",
+    "country_code": "TN",
+    "abbr": "TUN",
+    "val": "TND",
+    "code": "+216",
+    "example": "+216 XX XXX XXX",
+    "aliases": [
+      "Tunisia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Тунис"
+  },
+  {
+    "name": "Турция",
+    "name_en": "Turkey",
+    "country_code": "TR",
+    "abbr": "TUR",
+    "val": "TRY",
+    "code": "+90",
+    "example": "+90 XXX XXX XX XX",
+    "aliases": [
+      "Turkey",
+      "Türkiye"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Турция"
+  },
+  {
+    "name": "Туркменистан",
+    "name_en": "Turkmenistan",
+    "country_code": "TM",
+    "abbr": "TKM",
+    "val": "TMT",
+    "code": "+993",
+    "example": "+993 XX XXX XXX",
+    "aliases": [
+      "Turkmenistan",
+      "Türkmenistan"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Туркменистан"
+  },
+  {
+    "name": "Turks and Caicos Islands",
+    "name_en": "Turks and Caicos Islands",
+    "country_code": "TC",
+    "abbr": "TCA",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Turks and Caicos Islands"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Turks_and_Caicos_Islands"
+  },
+  {
+    "name": "Тувалу",
+    "name_en": "Tuvalu",
+    "country_code": "TV",
+    "abbr": "TUV",
+    "val": "AUD",
+    "code": "+688",
+    "example": "+688 XXXXX",
+    "aliases": [
+      "Tuvalu"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Тувалу"
+  },
+  {
+    "name": "Уганда",
+    "name_en": "Uganda",
+    "country_code": "UG",
+    "abbr": "UGA",
+    "val": "UGX",
+    "code": "+256",
+    "example": "+256 XXX XXXXXX",
+    "aliases": [
+      "Uganda"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Уганда"
+  },
+  {
+    "name": "Украина",
+    "name_en": "Ukraine",
+    "country_code": "UA",
+    "abbr": "UKR",
+    "val": "UAH",
+    "code": "+380",
+    "example": "+380 XX XXX XX XX",
+    "aliases": [
+      "Ukraine",
+      "Україна"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Украина"
+  },
+  {
+    "name": "ОАЭ",
+    "name_en": "United Arab Emirates",
+    "country_code": "AE",
+    "abbr": "ARE",
+    "val": "AED",
+    "code": "+971",
+    "example": "+971 XX XXX XXXX",
+    "aliases": [
+      "United Arab Emirates",
+      "UAE"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Объединённые_Арабские_Эмираты"
+  },
+  {
+    "name": "Великобритания",
+    "name_en": "United Kingdom",
+    "country_code": "GB",
+    "abbr": "GBR",
+    "val": "GBP",
+    "code": "+44",
+    "example": "+44 XXXX XXXXXX",
+    "aliases": [
+      "United Kingdom",
+      "UK",
+      "Britain",
+      "England"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Великобритания"
+  },
+  {
+    "name": "США",
+    "name_en": "United States",
+    "country_code": "US",
+    "abbr": "USA",
+    "val": "USD",
+    "code": "+1",
+    "example": "+1 (XXX) XXX-XXXX",
+    "aliases": [
+      "United States",
+      "USA",
+      "America"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/США"
+  },
+  {
+    "name": "United States Minor Outlying Islands",
+    "name_en": "United States Minor Outlying Islands",
+    "country_code": "UM",
+    "abbr": "UMI",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "United States Minor Outlying Islands"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/United_States_Minor_Outlying_Islands"
+  },
+  {
+    "name": "Уругвай",
+    "name_en": "Uruguay",
+    "country_code": "UY",
+    "abbr": "URY",
+    "val": "UYU",
+    "code": "+598",
+    "example": "+598 XXXX XXXX",
+    "aliases": [
+      "Uruguay"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Уругвай"
+  },
+  {
+    "name": "Узбекистан",
+    "name_en": "Uzbekistan",
+    "country_code": "UZ",
+    "abbr": "UZB",
+    "val": "UZS",
+    "code": "+998",
+    "example": "+998 XX XXX XX XX",
+    "aliases": [
+      "Uzbekistan",
+      "O'zbekiston"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Узбекистан"
+  },
+  {
+    "name": "Вануату",
+    "name_en": "Vanuatu",
+    "country_code": "VU",
+    "abbr": "VUT",
+    "val": "VUV",
+    "code": "+678",
+    "example": "+678 XXXXX",
+    "aliases": [
+      "Vanuatu"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Вануату"
+  },
+  {
+    "name": "Ватикан",
+    "name_en": "Vatican City",
+    "country_code": "VA",
+    "abbr": "VAT",
+    "val": "EUR",
+    "code": "+39",
+    "example": "+39 06 XXXX XXXX",
+    "aliases": [
+      "Vatican City",
+      "Holy See"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Ватикан"
+  },
+  {
+    "name": "Венесуэла",
+    "name_en": "Venezuela",
+    "country_code": "VE",
+    "abbr": "VEN",
+    "val": "VED",
+    "code": "+58",
+    "example": "+58 XXX-XXXXXXX",
+    "aliases": [
+      "Venezuela"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Венесуэла"
+  },
+  {
+    "name": "Вьетнам",
+    "name_en": "Vietnam",
+    "country_code": "VN",
+    "abbr": "VNM",
+    "val": "VND",
+    "code": "+84",
+    "example": "+84 XXX XXX XXX",
+    "aliases": [
+      "Vietnam",
+      "Việt Nam"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Вьетнам"
+  },
+  {
+    "name": "Virgin Islands, British",
+    "name_en": "Virgin Islands, British",
+    "country_code": "VG",
+    "abbr": "VGB",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Virgin Islands, British"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Virgin_Islands,_British"
+  },
+  {
+    "name": "Virgin Islands, U.S.",
+    "name_en": "Virgin Islands, U.S.",
+    "country_code": "VI",
+    "abbr": "VIR",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Virgin Islands, U.S."
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Virgin_Islands,_U.S."
+  },
+  {
+    "name": "Wallis and Futuna",
+    "name_en": "Wallis and Futuna",
+    "country_code": "WF",
+    "abbr": "WLF",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Wallis and Futuna"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Wallis_and_Futuna"
+  },
+  {
+    "name": "Western Sahara",
+    "name_en": "Western Sahara",
+    "country_code": "EH",
+    "abbr": "ESH",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Western Sahara"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Western_Sahara"
+  },
+  {
+    "name": "Йемен",
+    "name_en": "Yemen",
+    "country_code": "YE",
+    "abbr": "YEM",
+    "val": "YER",
+    "code": "+967",
+    "example": "+967 X XXX XXX",
+    "aliases": [
+      "Yemen"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Йемен"
+  },
+  {
+    "name": "Замбия",
+    "name_en": "Zambia",
+    "country_code": "ZM",
+    "abbr": "ZMB",
+    "val": "ZMW",
+    "code": "+260",
+    "example": "+260 XX XXX XXXX",
+    "aliases": [
+      "Zambia"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Замбия"
+  },
+  {
+    "name": "Зимбабве",
+    "name_en": "Zimbabwe",
+    "country_code": "ZW",
+    "abbr": "ZWE",
+    "val": "ZWL",
+    "code": "+263",
+    "example": "+263 X XXX XXXX",
+    "aliases": [
+      "Zimbabwe"
+    ],
+    "wiki_url": "https://ru.wikipedia.org/wiki/Зимбабве"
+  },
+  {
+    "name": "Åland Islands",
+    "name_en": "Åland Islands",
+    "country_code": "AX",
+    "abbr": "ALA",
+    "val": "N/A",
+    "code": "N/A",
+    "example": "N/A",
+    "aliases": [
+      "Åland Islands"
+    ],
+    "wiki_url": "https://en.wikipedia.org/wiki/Åland_Islands"
+  }
+]

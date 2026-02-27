@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0d0d0d">
+  <meta name="description" content="Tugriki - парсер аккаунтов, ZWNJ текст, коды стран и полезные инструменты">
+  <title>Tugriki</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="shortcut icon" href="assets/tugrik.png" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4T870HEQPJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4T870HEQPJ');
+  </script>
+</head>
+
+<body>
+
+  <nav class="navigation" role="navigation" aria-label="Основная навигация">
+    <div class="nav-buttons">
+      <button class="nav-btn" onclick="switchPage('links')" aria-label="Полезные ссылки">
+        <span class="nav-icon" aria-hidden="true">🔍</span>
+        <span>Ссылки</span>
+      </button>
+      <button class="nav-btn" onclick="switchPage('codes')" aria-label="Коды стран">
+        <span class="nav-icon" aria-hidden="true">🌍</span>
+        <span>Страны</span>
+      </button>
+      <button class="nav-btn" onclick="switchPage('zwnj')" aria-label="ZWNJ текст">
+        <span class="nav-icon" aria-hidden="true">✨</span>
+        <span>ZWNJ текст</span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="pages-container">
+
+    <!-- ZWNJ -->
+    <section class="page" id="zwnj-page" role="main">
+      <div class="container">
+        <header>
+          <h1>ZWNJ <span>Текст</span></h1>
+        </header>
+        <div class="input-section">
+          <div class="input-description">
+            ZWNJ (Zero-Width Non-Joiner) — невидимый символ Unicode (U+200C), добавляемый после каждого символа текста. Используется для контроля соединения символов в некоторых письменностях.
+          </div>
+          <label for="zwnjInputData" class="sr-only">Текст для обработки ZWNJ</label>
+          <textarea id="zwnjInputData" placeholder="Введите текст для обработки ZWNJ..."></textarea>
+        </div>
+        <div class="buttons">
+          <button onclick="processZWNJ()">Добавить ZWNJ</button>
+          <button onclick="clearZWNJ()" class="clear-btn">Очистить</button>
+          <button onclick="copyZWNJResult()" class="download-btn" id="zwnjCopyBtn" style="display:none">Копировать результат</button>
+        </div>
+        <div class="results-section" role="region" aria-label="Результаты обработки ZWNJ">
+          <div id="zwnjResultsContainer">
+            <div class="empty-message">Результат появится здесь после обработки текста.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СТРАНЫ -->
+    <section class="page" id="codes-page" role="main">
+      <div class="container">
+        <header>
+          <h1>Коды <span>Стран</span></h1>
+        </header>
+        <div class="input-section">
+          <div class="input-description">
+            <p>Поиск телефонных кодов стран. Введите название на русском или английском, код или ISO-сокращение.</p>
+            <p>Для флага — откройте статью на Wikipedia и скачайте .png из правой колонки.</p>
+          </div>
+          <label for="countrySearch" class="sr-only">Поиск стран</label>
+          <input type="text" id="countrySearch" placeholder="Поиск по названию, коду, ISO..." onkeyup="searchCountries()" autocomplete="off">
+        </div>
+        <div class="buttons">
+          <button onclick="clearCountrySearch()" class="clear-btn">Очистить поиск</button>
+        </div>
+        <div class="results-section" role="region" aria-label="Результаты поиска стран">
+          <div id="countryResultsContainer">
+            <div class="country-count" id="countryCount" aria-live="polite">Всего стран: 0</div>
+            <div class="table-container">
+              <table id="countryTable" role="table">
+                <thead>
+                  <tr>
+                    <th class="country-name-ru-col" scope="col">Страна (рус)</th>
+                    <th class="country-name-en-col" scope="col">Country (eng)</th>
+                    <th class="country-abbr-col" scope="col">ISO2</th>
+                    <th class="country-abbr-col" scope="col">ISO3</th>
+                    <th class="country-val-col" scope="col">Валюта</th>
+                    <th class="country-code-col" scope="col">Код</th>
+                    <th class="country-example-col" scope="col">Пример</th>
+                    <th class="country-flag-col" scope="col">Флаг</th>
+                  </tr>
+                </thead>
+                <tbody id="countryTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ССЫЛКИ -->
+    <section class="page" id="links-page" role="main">
+      <div class="container">
+        <header>
+          <h1>Полезные <span>Ссылки</span></h1>
+        </header>
+        <div class="input-section">
+          <div class="input-description">Ресурсы и инструменты для работы.</div>
+        </div>
+        <div class="link-section">
+
+          <article class="link-card">
+            <div class="link-image">
+              <img src="assets/lading.png" alt="LANDING HUB" loading="lazy">
+            </div>
+            <h3>Landing Hub</h3>
+            <div class="link-description"></div>
+            <a href="http://landhub.tugrik-camp.shop" target="_blank" rel="noopener noreferrer" class="link-button">Открыть</a>
+          </article>
+
+          <article class="link-card">
+            <div class="link-image">
+              <img src="assets/lading.png" alt="LANDING ТЗ" loading="lazy">
+            </div>
+            <h3>Landing ТЗ</h3>
+            <div class="link-description"></div>
+            <a href="http://tz.tugrik-camp.shop" target="_blank" rel="noopener noreferrer" class="link-button">Открыть</a>
+          </article>
+
+          <article class="link-card">
+            <div class="link-image">
+              <img src="assets/tg_bot1.png" alt="Telegram Bot @tugr1kPRJ_bot" loading="lazy">
+            </div>
+            <h3>Telegram Bot</h3>
+            <div class="link-description">@tugr1kPRJ_bot</div>
+            <a href="https://t.me/tugr1kPRJ_bot" target="_blank" rel="noopener noreferrer" class="link-button">Открыть</a>
+          </article>
+
+          <article class="link-card">
+            <div class="link-image">
+              <img src="assets/tg_bot3.png" alt="Telegram Bot @InfoTugrik_bot" loading="lazy">
+            </div>
+            <h3>Telegram Bot</h3>
+            <div class="link-description">@InfoTugrik_bot</div>
+            <a href="https://t.me/InfoTugrik_bot" target="_blank" rel="noopener noreferrer" class="link-button">Открыть</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!--
+    ══ ПАРСЕР — ЗАКОММЕНТИРОВАН ══
+    <section class="page" id="parser-page" role="main">
+      <div class="container">
+        <header>
+          <h1>Парсер <span>Аккаунтов</span></h1>
+        </header>
+        <div class="input-section">
+          <div class="input-example">Пример: Имя|Логин|Пароль|Логин_от_почты|Пароль_почты|Номер_аккаунта|...</div>
+          <label for="inputData" class="sr-only">Данные аккаунтов для разбора</label>
+          <textarea id="inputData" placeholder="Вставьте данные аккаунтов здесь..."></textarea>
+        </div>
+        <div class="separator-section">
+          <label for="separator">Разделитель данных:</label>
+          <input type="text" id="separator" value="|">
+        </div>
+        <div class="buttons">
+          <button onclick="parseData()">Разобрать</button>
+          <button onclick="clearData()" class="clear-btn">Очистить</button>
+          <button onclick="downloadExcel()" class="download-btn" id="downloadBtn" style="display:none">Скачать XLSX</button>
+        </div>
+        <div class="results-section">
+          <div id="resultsContainer">
+            <div class="empty-message">Данные не загружены. Вставьте текст выше и нажмите "Разобрать".</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    ══ /ПАРСЕР ══
+    -->
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" defer></script>
+  <script src="assets/script.js" defer></script>
+
+</body>
+</html>
