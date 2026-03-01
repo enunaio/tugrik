@@ -146,17 +146,39 @@ function renderCountryTable(data) {
     const wiki = c.wiki_url
       ? `<a href="${escapeHtml(c.wiki_url)}" target="_blank" rel="noopener noreferrer" class="wiki-link">🔗 Wiki</a>`
       : '—';
+    const copyCell = (val, cls) => {
+      const v = val == null ? '' : String(val);
+      return `<td class="${cls} cell-with-copy" data-copy="${escapeHtml(v)}">${escapeHtml(v)}<span class="copy-icon" title="Копировать"></span></td>`;
+    };
     return `<tr>
-      <td class="country-name-ru-col">${escapeHtml(c.name)}</td>
-      <td class="country-name-en-col">${escapeHtml(c.name_en)}</td>
-      <td class="country-abbr-col">${escapeHtml(c.country_code)}</td>
-      <td class="country-abbr-col">${escapeHtml(c.abbr)}</td>
-      <td class="country-val-col">${escapeHtml(c.val)}</td>
-      <td class="country-code-col">${escapeHtml(c.code)}</td>
-      <td class="country-example-col">${escapeHtml(c.example)}</td>
+      ${copyCell(c.name, 'country-name-ru-col')}
+      ${copyCell(c.name_en, 'country-name-en-col')}
+      ${copyCell(c.country_code, 'country-abbr-col')}
+      ${copyCell(c.abbr, 'country-abbr-col')}
+      ${copyCell(c.val, 'country-val-col')}
+      ${copyCell(c.code, 'country-code-col')}
+      ${copyCell(c.example, 'country-example-col')}
       <td class="country-flag-col">${wiki}</td>
     </tr>`;
   }).join('');
+
+  // Delegate copy clicks
+  const tbody2 = document.getElementById('countryTableBody');
+  tbody2.onclick = (e) => {
+    const icon = e.target.closest('.copy-icon');
+    if (!icon) return;
+    const cell = icon.closest('.cell-with-copy');
+    const text = cell ? (cell.dataset.copy || '') : '';
+    if (!text) return;
+    const orig = icon.title;
+    const done = () => { icon.classList.add('copied'); icon.title = '✓'; setTimeout(() => { icon.classList.remove('copied'); icon.title = orig; }, 1500); };
+    const fail = () => { icon.title = '!'; setTimeout(() => icon.title = orig, 1500); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done, fail));
+    } else {
+      fallbackCopy(text, done, fail);
+    }
+  };
 }
 
 function searchCountries() {

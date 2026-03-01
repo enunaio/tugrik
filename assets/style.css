@@ -135,6 +135,16 @@ body::after {
 .nav-icon {
     font-size: 14px;
     line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    flex-shrink: 0;
+}
+
+.nav-icon svg {
+    display: block;
+    stroke: currentColor;
 }
 
 /* ─── PAGES ─── */
@@ -444,24 +454,29 @@ thead tr:hover th { color: var(--orange) !important; }
 .country-flag-col    { min-width: 70px;  max-width: 80px; text-align: center; }
 
 /* Copy cells */
-.cell-with-copy { position: relative; padding-right: 32px !important; }
+.cell-with-copy { position: relative; padding-right: 32px !important; cursor: default; }
 
 .copy-icon {
     position: absolute;
-    right: 8px; top: 50%;
+    right: 6px; top: 50%;
     transform: translateY(-50%);
     width: 16px; height: 16px;
     opacity: 0;
     cursor: pointer;
-    transition: opacity 0.15s;
+    transition: opacity 0.15s, transform 0.15s;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23c75a2a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='9' y='9' width='13' height='13' rx='2' ry='2'></rect><path d='M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1'></path></svg>");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
+.copy-icon.copied {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234caf7d' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'></polyline></svg>");
+    opacity: 1 !important;
+}
+
 td:hover .copy-icon,
-.cell-with-copy:hover .copy-icon { opacity: 0.7; }
-.copy-icon:hover { opacity: 1 !important; transform: translateY(-50%) scale(1.1); }
+.cell-with-copy:hover .copy-icon { opacity: 0.6; }
+.copy-icon:hover { opacity: 1 !important; transform: translateY(-50%) scale(1.15); }
 
 /* ─── ZWNJ ─── */
 
